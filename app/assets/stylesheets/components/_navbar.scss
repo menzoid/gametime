@@ -1,12 +1,87 @@
+// variable css
+:root{
+  --transition-time: 0.4s;
+}
+// principal value of navbar
+.navbar-class-parent{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 97%;
+  height: 70px;
+  margin: 15px auto;
+}
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: linear-gradient(135deg, $blue, $dark);
+  border-radius: 20px;
+  border: $blue 3px solid;
+  width: 100%;
+  // box-shadow: 0 0 15px $blue; shadow behind navbar
 }
 
+// value of the right side of the navbar
+.navbar-lewagon a{
+  color: $light;
+  transition: var(--transition-time);
+}
+.navbar-lewagon a:hover{
+  color: $orange;
+}
+.logo-content-icon-left{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 50px;
+}
+
+// left part navbar
+.navbar-signing{
+  display:flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.navbar-signing a{
+  text-decoration: none;
+}
+
+// sign up button
+.signup-navbar a{
+  color: $orange;
+  transition: var(--transition-time);
+}
+.signup-navbar a:hover{
+  color: $light;
+}
+
+// signin button
+.login-navbar{
+  padding: 5px 20px;
+  border: 1px solid transparent;
+  background: $orange;
+  border-radius:15px;
+  margin: 0 20px;
+
+  color: $light;
+  transition: var(--transition-time);
+}
+.login-navbar:hover{
+  border: 1px solid $orange;
+  background: $dark;
+  border-radius:15px;
+  margin: 0 20px;
+}
+.login-navbar a:hover{
+  color: $orange;
+}
+
+// between element grows (DO NOT TOUCH!)
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+// logo image size
+.navbar-brand img {
+  width: 55px;
 }
