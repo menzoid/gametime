@@ -8,12 +8,14 @@
 
 puts "adds categories"
 
-Category.create!(name: 'puzzle')
-Category.create!(name: 'strategy')
-Category.create!(name: 'adult')
-Category.create!(name: 'card')
+Category.create!(name: 'dice')
+Category.create!(name: 'kids')
 
 puts "added categories"
+
+puts "deleting games"
+
+Game.destroy_all
 
 puts "adding games to db"
 
@@ -25,10 +27,9 @@ puts "adding games to db"
     player_count: rand(2..10),
     play_time: rand(0.5..4.0),
     price: rand(5..20),
-    user_id: rand(1..3)
+    user_id: rand(1..3),
+    description: Faker::Lorem.paragraph(sentence_count: 5)
   )
-
-
 end
 
 puts "games added"
