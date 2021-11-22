@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_22_155316) do
+ActiveRecord::Schema.define(version: 2021_11_22_183315) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,9 +27,14 @@ ActiveRecord::Schema.define(version: 2021_11_22_155316) do
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "games", force: :cascade do |t|
     t.string "title"
-    t.string "category"
     t.integer "difficulty"
     t.integer "player_count"
     t.float "play_time"
@@ -37,6 +42,8 @@ ActiveRecord::Schema.define(version: 2021_11_22_155316) do
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "category_id", null: false
+    t.index ["category_id"], name: "index_games_on_category_id"
     t.index ["user_id"], name: "index_games_on_user_id"
   end
 
@@ -60,5 +67,6 @@ ActiveRecord::Schema.define(version: 2021_11_22_155316) do
 
   add_foreign_key "bookings", "games"
   add_foreign_key "bookings", "users"
+  add_foreign_key "games", "categories"
   add_foreign_key "games", "users"
 end

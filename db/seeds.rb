@@ -6,14 +6,21 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-puts "adding games to db"
+puts "adds categories"
 
-categories = ['strategy', 'cards', 'dice', 'puzzles' ]
+Category.create!(name: 'puzzle')
+Category.create!(name: 'strategy')
+Category.create!(name: 'adult')
+Category.create!(name: 'card')
+
+puts "added categories"
+
+puts "adding games to db"
 
 20.times do
   Game.create!(
     title: Faker::Game.title,
-    category: categories.select,
+    category_id: rand(1..4),
     difficulty: rand(1..5),
     player_count: rand(2..10),
     play_time: rand(0.5..4.0),
