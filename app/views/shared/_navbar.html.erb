@@ -18,9 +18,9 @@
         <li class="nav-item dropdown">
           <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <% if policy(Game).create? %> %>
-            <%= link_to 'New Game', new_game_path %>
-            <% end %>
+            <%# <% if policy(Game).create? %>
+            <%= link_to 'New Game', new_game_path, class: "dropdown-item" %>
+            <%# <% end %>
             <%= link_to "Another action", "#", class: "dropdown-item" %>
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
@@ -33,11 +33,5 @@
       <% end %>
     </ul>
   </div>
-
-
-
-
-
-
   </div>
 </div>
