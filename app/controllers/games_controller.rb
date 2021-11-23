@@ -1,5 +1,5 @@
 class GamesController < ApplicationController
-  before_action :set_game, only: %i[show edit update destroy]
+  before_action :set_game, only: %i[show]
   def index
     @games = policy_scope(Game)
   end
@@ -25,7 +25,7 @@ class GamesController < ApplicationController
   private
 
   def set_game
-    @game = List.find(params[:id])
+    @game = Game.find(params[:id])
   end
 
   def game_params
