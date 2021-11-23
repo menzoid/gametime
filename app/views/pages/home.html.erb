@@ -5,3 +5,42 @@
     <div class="button-game-home-page"><%= link_to 'Games', games_path %></div>
   </div>
 </div>
+<<<<<<< HEAD
+
+      <!--Category row-->
+      <div class="category-item mx-auto">
+        <div class="row">
+          <div class="col-md-4">
+              <div class="category"><%= image_tag("/assets/category01.jpg", :alt => "category01") %></div>
+          </div>
+          <div class="col-md-4 clearfix d-none d-md-block">
+              <div class="category"><%= image_tag("/assets/category01.jpg", :alt => "category01") %></div>
+          </div>
+          <div class="col-md-4 clearfix d-none d-md-block">
+              <div class="category"><%= image_tag("/assets/category01.jpg", :alt => "category01") %></div>
+          </div>
+        </div>
+      </div>
+      <!--/.Category row-->
+
+      <!--Top Games row-->
+  <div class="index-games-show">
+  <% @games[0..3].each do |game| %>
+  <div class="div-game-show">
+    <div class="picture-of-the-div-game-show">
+      <%= image_tag("/assets/boardGame.jpeg") %>
+    </div>
+    <div class="content-of-the-div-game-show">
+      <div class="content-of-the-div-game-show-p">
+        <p>Title :<%= game.title %></p>
+        <p>Difficulty :<%= game.difficulty %></p>
+        <p>Players require:<%= game.player_count %></p>
+        <p>Play Time :<%= game.play_time %></p>
+        <p>Price :<%= game.price %></p>
+      </div>
+    </div>
+  </div>
+<% end %>
+</div>
+=======
+>>>>>>> 799cc451ca9b370917bf51be1cdc46c1ba995db1
