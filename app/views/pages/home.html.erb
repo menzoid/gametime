@@ -6,11 +6,11 @@
   </div>
 </div>
 
-<div class="category-carousel-cards-display">
-  <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+<div class="category-cards-display justify-content-center">
+  <div id="multi-item-example" class=" slide -multi-item" data-ride="">
 
     <!--Indicators-->
-    <!-- <ol class="carousel-indicators">
+    <!-- <ol class="-indicators">
       <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
       <li data-target="#multi-item-example" data-slide-to="1"></li>
       <li data-target="#multi-item-example" data-slide-to="2"></li>
@@ -18,72 +18,52 @@
     <!--/.Indicators-->
 
     <!--Slides-->
-    <div class="carousel-inner p-3 " role="listbox">
+    <div class="Category mx-auto " role="listbox">
 
-      <!--First slide-->
-      <div class="carousel-item active">
+      <!--Category row-->
+      <div class="category-item mx-auto">
         <div class="row">
-          <div class="col-md-3">
-              <div class="carousel-category"><%= image_tag("/assets/carousel-category01.jpg", :alt => "carousel-category01") %></div>
+          <div class="col-md-4">
+              <div class="category"><%= image_tag("/assets/category01.jpg", :alt => "category01") %></div>
           </div>
-          <div class="col-md-3 clearfix d-none d-md-block">
-              <div class="carousel-category"><%= image_tag("/assets/carousel-category01.jpg", :alt => "carousel-category01") %></div>
+          <div class="col-md-4 clearfix d-none d-md-block">
+              <div class="category"><%= image_tag("/assets/category01.jpg", :alt => "category01") %></div>
           </div>
-          <div class="col-md-3 clearfix d-none d-md-block">
-              <div class="carousel-category"><%= image_tag("/assets/carousel-category01.jpg", :alt => "carousel-category01") %></div>
-          </div>
-          <div class="col-md-3 clearfix d-none d-md-block">
-              <div class="carousel-category"><%= image_tag("/assets/carousel-category01.jpg", :alt => "carousel-category01") %></div>
+          <div class="col-md-4 clearfix d-none d-md-block">
+              <div class="category"><%= image_tag("/assets/category01.jpg", :alt => "category01") %></div>
           </div>
         </div>
       </div>
-      <!--/.First slide-->
+      <!--/.Category row-->
+    </div>
 
-      <!--Second slide-->
-      <div class="carousel-item">
-        <div class="row">
-          <div class="col-md-3">
-              <div class="carousel-category"><%= image_tag("/assets/carousel-category01.jpg", :alt => "carousel-category01") %></div>
-          </div>
-          <div class="col-md-3 clearfix d-none d-md-block">
-              <div class="carousel-category"><%= image_tag("/assets/carousel-category01.jpg", :alt => "carousel-category01") %></div>
-          </div>
-          <div class="col-md-3 clearfix d-none d-md-block">
-              <div class="carousel-category"><%= image_tag("/assets/carousel-category01.jpg", :alt => "carousel-category01") %></div>
-          </div>
-          <div class="col-md-3 clearfix d-none d-md-block">
-              <div class="carousel-category"><%= image_tag("/assets/carousel-category01.jpg", :alt => "carousel-category01") %></div>
-          </div>
-        </div>
-      </div>
-      <!--/.Second slide-->
-
-      <!--Third slide-->
-      <div class="carousel-item">
-        <div class="row">
-          <div class="col-md-3">
-              <div class="carousel-category"><%= image_tag("/assets/carousel-category01.jpg", :alt => "carousel-category01") %></div>
-          </div>
-          <div class="col-md-3 clearfix d-none d-md-block">
-              <div class="carousel-category"><%= image_tag("/assets/carousel-category01.jpg", :alt => "carousel-category01") %></div>
-          </div>
-          <div class="col-md-3 clearfix d-none d-md-block">
-              <div class="carousel-category"><%= image_tag("/assets/carousel-category01.jpg", :alt => "carousel-category01") %></div>
-          </div>
-          <div class="col-md-3 clearfix d-none d-md-block">
-              <div class="carousel-category"><%= image_tag("/assets/carousel-category01.jpg", :alt => "carousel-category01") %></div>
-          </div>
-        </div>
+      <!--Top Games row-->
+      <div class="index-games-show">
+    <% @games[0..3].each do |game| %>
+  <div class="div-game-show">
+    <div class="picture-of-the-div-game-show">
+      <%= image_tag("/assets/boardGame.jpeg") %>
+    </div>
+    <div class="content-of-the-div-game-show">
+      <div class="content-of-the-div-game-show-p">
+        <p>Title :<%= game.title %></p>
+        <p>Difficulty :<%= game.difficulty %></p>
+        <p>Players require:<%= game.player_count %></p>
+        <p>Play Time :<%= game.play_time %></p>
+        <p>Price :<%= game.price %></p>
       </div>
     </div>
-      <!--/.Third slide-->
+  </div>
+    <% end %>
+</div>
+      <!--/.Top Games row-->
+  </div>
 
       <!--Controls-->
-    <div class="controls-bottom">
+    <!--<div class="controls-bottom">
       <a class="btn btn-primary" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
       <a class="btn btn-primary" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
-    </div>
+    </div>-->
     <!--/.Controls-->
     <!--/.Slides-->
-  </div>
 </div>
