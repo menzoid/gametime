@@ -1,3 +1,4 @@
+// DO NOT TOUCH THIS CSS ITS FOR THE INDEX PAGE AND NOT THE HOME PAGE
 // normal "carousel card "
 .card-category {
   display: flex;
@@ -18,20 +19,20 @@
 }
 
 // carousel test
-.category-cards-display{
-    padding: 5%;
-    margin-left: 3%;
+.carousel-item{
+  padding: 2%;
+  margin-left: 2%;
 }
 
 // sizing the images
-.category{
+.carousel-category{
   width: 250px;
   height: 300px;
   border-radius: 20px;
 
   overflow: hidden;
 }
-.category img{
+.carousel-category img{
   width: 100%;
 }
 
@@ -39,5 +40,5 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 3%;
+  margin-right: 1%;
 }
