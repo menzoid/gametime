@@ -21,3 +21,26 @@
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
+
+// button banner
+.button-game-home-page{
+  width: 100px;
+  padding: 5px 20px;
+  border: 1px solid transparent;
+  background: $orange;
+  border-radius:15px;
+  margin: 0 20px;
+
+  color: $light;
+  transition: var(--transition-time);
+}
+.button-game-home-page:hover{
+  border: 1px solid $orange;
+  background: transparent;
+  border-radius:15px;
+  margin: 0 20px;
+}
+.button-game-home-page a:hover{
+  text-decoration: none;
+  color: $orange;
+}

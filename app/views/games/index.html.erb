@@ -1,28 +1,22 @@
 <h1>Games</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>User</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @games.each do |game| %>
-      <tr>
-        <td><%= game.title %></td>
-        <td><%= game.user.email %></td>
-        <td><%= link_to 'Show', game %></td>
-        <!--<% if policy(game).edit? %>
-        <td><%= link_to 'Edit', edit_restaurant_path(restaurant) %></td>
-        <td><%= link_to 'Destroy', restaurant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>-->
-      </tr>
+<div class="index-games-show">
+<% @games.each do |game| %>
+  <div class="div-game-show">
+    <div class="picture-of-the-div-game-show">
+      <%= image_tag("/assets/image-random-boardGame.jpeg") %>
+    </div>
+    <div class="content-of-the-div-game-show">
+      <%= game.title %>
+      <%= game.difficulty %>
+      <%= game.player_count %>
+      <%= game.play_time %>
+      <%= game.price %>
+    </div>
+  </div>
     <% end %>
-  </tbody>
-</table>
+</div>
+
 
 <br>
 <%# <% if policy(Restaurant).create? %> %>
