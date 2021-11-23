@@ -1,24 +1,102 @@
 <h1>Games</h1>
 
+<div class="category-carousel-cards-display">
+  <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+    <!--Indicators-->
+    <!-- <ol class="carousel-indicators">
+      <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+      <li data-target="#multi-item-example" data-slide-to="1"></li>
+      <li data-target="#multi-item-example" data-slide-to="2"></li>
+    </ol> -->
+    <!--/.Indicators-->
+
+    <!--Slides-->
+    <div class="carousel-inner p-3 " role="listbox">
+
+      <!--First slide-->
+      <div class="carousel-item active">
+        <div class="row">
+          <div class="col-md-3">
+              <div class="carousel-category"><%= image_tag("/assets/carousel-category01.jpg", :alt => "carousel-category01") %></div>
+          </div>
+          <div class="col-md-3 clearfix d-none d-md-block">
+              <div class="carousel-category"><%= image_tag("/assets/carousel-category01.jpg", :alt => "carousel-category01") %></div>
+          </div>
+          <div class="col-md-3 clearfix d-none d-md-block">
+              <div class="carousel-category"><%= image_tag("/assets/carousel-category01.jpg", :alt => "carousel-category01") %></div>
+          </div>
+          <div class="col-md-3 clearfix d-none d-md-block">
+              <div class="carousel-category"><%= image_tag("/assets/carousel-category01.jpg", :alt => "carousel-category01") %></div>
+          </div>
+        </div>
+      </div>
+      <!--/.First slide-->
+
+      <!--Second slide-->
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col-md-3">
+              <div class="carousel-category"><%= image_tag("/assets/carousel-category01.jpg", :alt => "carousel-category01") %></div>
+          </div>
+          <div class="col-md-3 clearfix d-none d-md-block">
+              <div class="carousel-category"><%= image_tag("/assets/carousel-category01.jpg", :alt => "carousel-category01") %></div>
+          </div>
+          <div class="col-md-3 clearfix d-none d-md-block">
+              <div class="carousel-category"><%= image_tag("/assets/carousel-category01.jpg", :alt => "carousel-category01") %></div>
+          </div>
+          <div class="col-md-3 clearfix d-none d-md-block">
+              <div class="carousel-category"><%= image_tag("/assets/carousel-category01.jpg", :alt => "carousel-category01") %></div>
+          </div>
+        </div>
+      </div>
+      <!--/.Second slide-->
+
+      <!--Third slide-->
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col-md-3">
+              <div class="carousel-category"><%= image_tag("/assets/carousel-category01.jpg", :alt => "carousel-category01") %></div>
+          </div>
+          <div class="col-md-3 clearfix d-none d-md-block">
+              <div class="carousel-category"><%= image_tag("/assets/carousel-category01.jpg", :alt => "carousel-category01") %></div>
+          </div>
+          <div class="col-md-3 clearfix d-none d-md-block">
+              <div class="carousel-category"><%= image_tag("/assets/carousel-category01.jpg", :alt => "carousel-category01") %></div>
+          </div>
+          <div class="col-md-3 clearfix d-none d-md-block">
+              <div class="carousel-category"><%= image_tag("/assets/carousel-category01.jpg", :alt => "carousel-category01") %></div>
+          </div>
+        </div>
+      </div>
+    </div>
+      <!--/.Third slide-->
+
+      <!--Controls-->
+    <div class="controls-bottom">
+      <a class="btn btn-primary" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+      <a class="btn btn-primary" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+    </div>
+    <!--/.Controls-->
+    <!--/.Slides-->
+  </div>
+</div>
+
 <div class="index-games-show">
-<% @games.each do |game| %>
+<% @games[0..3].each do |game| %>
   <div class="div-game-show">
     <div class="picture-of-the-div-game-show">
       <%= image_tag("/assets/image-random-boardGame.jpeg") %>
     </div>
     <div class="content-of-the-div-game-show">
-      <%= game.title %>
-      <%= game.difficulty %>
-      <%= game.player_count %>
-      <%= game.play_time %>
-      <%= game.price %>
+      <div class="content-of-the-div-game-show-p">
+        <p>Title :<%= game.title %></p>
+        <p>Difficulty :<%= game.difficulty %></p>
+        <p>Players require:<%= game.player_count %></p>
+        <p>Play Time :<%= game.play_time %></p>
+        <p>Price :<%= game.price %></p>
+      </div>
     </div>
   </div>
     <% end %>
 </div>
-
-
-<br>
-<%# <% if policy(Restaurant).create? %> %>
-  <%= link_to 'New Game', new_game_path %>
-<%# <% end %> %>

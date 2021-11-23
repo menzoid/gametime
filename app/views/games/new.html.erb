@@ -4,7 +4,7 @@
       <div class="bg-white rounded p-3 shadow">
         <h3>Create a new game</h3>
         <%= simple_form_for @game do |f| %>
-          <%= f.input :name, placeholder: 'Catan' %>
+          <%= f.input :title, placeholder: 'Catan' %>
           <%= f.input :difficulty, placeholder: 'Hard' %>
           <%= f.input :player_count, placeholder: '2' %>
           <%= f.input :play_time, placeholder: '2 hrs' %>
