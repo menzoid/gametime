@@ -1,4 +1,4 @@
-<h1>Games</h1>
+<div class="index-title-page"><h1>Games</h1></div>
 
 <div class="category-carousel-cards-display">
   <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
@@ -82,19 +82,21 @@
   </div>
 </div>
 
+<div class="separation-of-the-carousel-cards"><h1>Those are the most views games of the moments</h1></div>
+
 <div class="index-games-show">
-<% @games.each do |game| %>
+<% @games[0..7].each do |game| %>
   <div class="div-game-show">
     <div class="picture-of-the-div-game-show">
       <%= image_tag("/assets/image-random-boardGame.jpeg") %>
     </div>
     <div class="content-of-the-div-game-show">
       <div class="content-of-the-div-game-show-p">
-        <p>Title :<%= game.title %></p>
-        <p>Difficulty :<%= game.difficulty %></p>
-        <p>Players require:<%= game.player_count %></p>
-        <p>Play Time :<%= game.play_time %></p>
-        <p>Price :<%= game.price %></p>
+        <p>Title: <%= game.title %></p>
+        <p>Difficulty: <%= game.difficulty %></p>
+        <p>Players require: <%= game.player_count %></p>
+        <p>Play Time: <%= game.play_time %></p>
+        <p>Price: <%= game.price %></p>
       </div>
     </div>
   </div>

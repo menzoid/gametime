@@ -1,5 +1,5 @@
 .banner {
-  height: 80vh;
+  height: 90vh;
   border-radius: 0 0 20px 20px;
   padding: 150px 0;
 
@@ -11,12 +11,12 @@
   margin: 0;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 32px;
+  font-size: 42px;
   font-weight: bold;
 }
 
 .banner p {
-  font-size: 20px;
+  font-size: 30px;
   color: white;
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
@@ -24,13 +24,18 @@
 
 // button banner
 .button-game-home-page{
-  width: 100px;
-  padding: 5px 20px;
+  text-align: center;
+  width: 160px;
+  padding: 10px 30px;
   border: 1px solid transparent;
   background: $orange;
   border-radius:15px;
   margin: 0 20px;
 
+  transition: var(--transition-time);
+}
+
+.button-game-home-page a{
   color: $light;
   transition: var(--transition-time);
 }
@@ -39,6 +44,7 @@
   background: transparent;
   border-radius:15px;
   margin: 0 20px;
+  color: $orange;
 }
 .button-game-home-page a:hover{
   text-decoration: none;
