@@ -1,8 +1,8 @@
-<div class="banner" style="background-image: url(/assets/home-page-banner01.jpeg);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(/assets/home-page-banner01.jpeg); ">
   <div class="container">
     <h1>It's GameTime baby!</strong>!</h1>
     <p>Find and rent a game, bitches..</p>
-    <div class="button-game-home-page"><%= link_to 'Games', games_path %></div>
+    <button class="button-game-home-page"><%= link_to 'Games', games_path %></button>
   </div>
 </div>
 
@@ -23,7 +23,7 @@
       <!--/.Category row-->
 
       <!--Top Games row-->
-  <div class="index-games-show">
+  <!-- <div class="index-games-show">
   <% @games[0..3].each do |game| %>
   <div class="div-game-show">
     <div class="picture-of-the-div-game-show">
@@ -40,4 +40,4 @@
     </div>
   </div>
 <% end %>
-</div>
+</div>-->
