@@ -1,6 +1,7 @@
 <%# body div for the page %>
 <div class="body-main-index-page">
   <%# top games on the top %>
+  <h1 class="top-games-title">Top games featured</h1>
   <div class="top-games-index-page">
     <%# banner featured game %>
     <%= link_to game_path(@featured_game) do %>
@@ -8,7 +9,7 @@
       <div class="banner-feature-content-game-index">
         <h1><%= @featured_game.title %></h1>
         <p><%= @featured_game.description %></p>
-        <button class="button-game-home-page"><%= link_to 'Games', games_path %></button>
+        <button class="button-game-home-page"><%= link_to 'Games', game_path(@featured_game) %></button>
       </div>
     </div>
     <% end %>
@@ -28,11 +29,14 @@
 
 
     <%# cards category div bottom %>
+  <h1 class="top-games-title">Top games featured</h1>
   <div class="category-main-div-game-index">
     <% @categories.each do |category| %>
+    <%= link_to category_path(category) do %>
     <div class="category-layout-design-category-game-index">
-      <p>Name</p><p><%= category.name %></p>
+      <p><%= category.name %></p>
     </div>
+    <% end %>
   <% end %>
   </div>
 </div>
