@@ -22,13 +22,13 @@ User.create(email: 'master@games.com', password: '123456')
 User.create(email: 'zemanel@games.com', password: '123456')
 User.create(email: 'slave@games.com', password: '123456')
 
-Category.create!(name: 'Dice')
-Category.create!(name: 'Puzzle')
-Category.create!(name: 'Strategy')
-Category.create!(name: 'Deck Builder')
-Category.create!(name: 'Family')
-Category.create!(name: 'Roll & Move')
-Category.create!(name: 'War game')
+Category.create!(name: 'Dice', photo: 'https://inkboxdesigns.imgix.net/product_stencils/3967452807246_1576612403.jpg?auto=compress,format&con=100&gam=100&pad=20&bg=F4F5F7&fit=fill&duotone=000000,F4F5F7')
+Category.create!(name: 'Puzzle', photo: 'https://cdn.shopify.com/s/files/1/0035/0715/9129/products/ChessAndDrafts-FoldingBoard-51153_800x800.jpg?v=1633620211')
+Category.create!(name: 'Strategy', photo: 'https://inkboxdesigns.imgix.net/product_stencils/3967452807246_1576612403.jpg?auto=compress,format&con=100&gam=100&pad=20&bg=F4F5F7&fit=fill&duotone=000000,F4F5F7')
+Category.create!(name: 'Deck Builder', photo: 'https://www.mcgill.ca/oss/files/oss/styles/hd/public/deckofcards_cover-02.png?itok=S-zIXK-9&timestamp=1530113172')
+Category.create!(name: 'Family', photo: 'https://cdn.shopify.com/s/files/1/0035/0715/9129/products/ChessAndDrafts-FoldingBoard-51153_800x800.jpg?v=1633620211')
+Category.create!(name: 'Roll & Move', photo: 'https://www.mcgill.ca/oss/files/oss/styles/hd/public/deckofcards_cover-02.png?itok=S-zIXK-9&timestamp=1530113172')
+Category.create!(name: 'War game', photo: 'https://cdn.shopify.com/s/files/1/0035/0715/9129/products/ChessAndDrafts-FoldingBoard-51153_800x800.jpg?v=1633620211')
 
 puts "added categories"
 puts "deleting games"
@@ -45,9 +45,9 @@ games_hash.each do |game|
     play_time: rand(0.5..4.0).round(2),
     price: rand(5..20).round(2),
     user: User.all.sample,
-    description: Faker::Lorem.paragraph(sentence_count: 5),
+    description: Faker::Lorem.paragraph(sentence_count: 8),
   )
-  file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyDt1XkKLn99T7gZ6VMDrpZVGXO1Yaut2kI1eVzK9vQ0_3E3YLd35tRSLSO4JL3nNefYc&usqp=CAU')
+  file = URI.open('https://picsum.photos/300/450')
   game.photo.attach(io: file, filename: "#{game}.png", content_type: 'image/png')
   game.save
 end
