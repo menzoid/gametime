@@ -1,57 +1,83 @@
+<div class="container mt-5 mb-5 w-1200">
+  <div class="row mb-40">
+    <div class="col-sm">
+        <%=image_tag "Catan.jpg", height: 400 %>
+    </div>
 
-<div class="container">
-  <div class="grid second-nav">
-    <div class="column-xs-12">
-      <nav>
-        <ol class="breadcrumb-list">
-          <li class="breadcrumb-item"><a href="#">Home</a></li>
-          <li class="breadcrumb-item"><a href="#">Household Plants</a></li>
-          <li class="breadcrumb-item active">Bonsai</li>
-        </ol>
-      </nav>
-    </div>
-  </div>
-  <div class="grid product">
-    <div class="column-xs-12 column-md-7">
-      <div class="product-gallery">
-        <div class="product-image">
-          <img class="active" src="https://source.unsplash.com/W1yjvf5idqA">
+    <div class="col-sm">
+      <h3><%= @game.title %></h3>
+      <p> <%=@game.description  %></p>
+      <div class="container d-flex justify-content-between book-container p-0">
+        <div class="col-sm">
+          <ul>
+            <li>Player Count: <%= @game.player_count %> players</li>
+            <li>Difficulty: <%= @game.difficulty %></li>
+            <li>Play time: <%= @game.play_time.floor(2) %>hours</li>
         </div>
-        <ul class="image-list">
-          <li class="image-item"><img src="https://source.unsplash.com/W1yjvf5idqA"></li>
-          <li class="image-item"><img src="https://source.unsplash.com/VgbUxvW3gS4"></li>
-          <li class="image-item"><img src="https://source.unsplash.com/5WbYFH0kf_8"></li>
-        </ul>
+        <div class="col-sm p-0">
+        <div class="bg-white w-60" style="position: sticky; top: 70px;">
+        <div class="d-flex justify-content-center pb-2 border-bottom">
+        <h1 class="header mb-0 pt-3">Rent it!</h1>
+      </div>
+        <div class="px-2 pb-2 w-100%">
+        <form class="simple_form new_booking" id="new_booking" novalidate="novalidate" action="/instruments/355/bookings" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="hlOBw8Jsq0ln2p8IbVxMQwPZzOM1PdhRckLMy7TMqiaMIc8aj9AFmWyHvSyYrAxdiSB80ne4/Bt6kjZRWCP7Rg==">
+
+      <div class="form_inputs my-4 mb-5">
+        <div class="form-group string required booking_start_date"><label class="form-control-label string required" for="booking_start_date">From: <abbr title="required">*</abbr></label><input class="form-control string required datepicker flatpickr-input" required="required" aria-required="true" type="hidden" name="booking[start_date]" id="booking_start_date" readonly="readonly"><input class="form-control string required datepicker flatpickr-input flatpickr-mobile" step="any" tabindex="1" type="date" required="" placeholder=""></div>
+        <div class="form-group string required booking_end_date"><label class="form-control-label string required" for="booking_end_date">To: <abbr title="required">*</abbr></label><input class="form-control string required datepicker flatpickr-input" required="required" aria-required="true" type="hidden" name="booking[end_date]" id="booking_end_date" readonly="readonly"><input class="form-control string required datepicker flatpickr-input flatpickr-mobile" step="any" tabindex="1" type="date" required="" placeholder=""></div>
+      </div>
+
+      <div class="form_actions mb-4 px-4">
+          <input type="submit" name="commit" value="Currently unavailable" class="btn btn btn-info btn-block" disabled="disabled" data-disable-with="Currently unavailable">
+      </div>
+        </form>
+      </div>
+      </div>
+      </div>
       </div>
     </div>
-    <div class="column-xs-12 column-md-5">
-      <h1>Bonsai</h1>
-      <h2>$19.99</h2>
-      <div class="description">
-        <p>The purposes of bonsai are primarily contemplation for the viewer, and the pleasant exercise of effort and ingenuity for the grower.</p>
-        <p>By contrast with other plant cultivation practices, bonsai is not intended for production of food or for medicine. Instead, bonsai practice focuses on long-term cultivation and shaping of one or more small trees growing in a container.</p>
-      </div>
-      <button class="add-to-cart">Add To Cart</button>
+
+    </div>
+
+  </div>
+
+  <h5>More from <%=@game_category.name %> </h5>
+
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+
+  <div class="carousel-inner">
+   <div class="carousel-item active">
+
+
+    <h1><%= @category_games[0].title %></h1>
+      <%# <img class="d-block w-100" src="..." alt="First slide"> %>
+      <%=image_tag("boardGame.jpg") %>
+    </div>
+    <div class="carousel-item">
+    <h1><%= @category_games[1].title %></h1>
+      <%# <img class="d-block w-100" src="..." alt="Second slide"> %>
+      <%=image_tag("Catan.jpg") %>
+    </div>
+    <div class="carousel-item">
+    <h1><%= @category_games[2].title %></h1>
+      <img class="d-block w-100" src="..." alt="Third slide">
+      <%=image_tag("carousel-category01.jpg") %>
     </div>
   </div>
-  <div class="grid related-products">
-    <div class="column-xs-12">
-      <h3>You may also like</h3>
-    </div>
-    <div class="column-xs-12 column-md-4">
-      <img src="https://source.unsplash.com/miziNqvJx5M">
-      <h4>Succulent</h4>
-      <p class="price">$19.99</p>
-    </div>
-    <div class="column-xs-12 column-md-4">
-      <img src="https://source.unsplash.com/2y6s0qKdGZg">
-      <h4>Terranium</h4>
-      <p class="price">$19.99</p>
-    </div>
-    <div class="column-xs-12 column-md-4">
-      <img src="https://source.unsplash.com/6Rs76hNbIWE">
-      <h4>Cactus</h4>
-      <p class="price">$19.99</p>
-    </div>
-  </div>
+
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
 </div>
