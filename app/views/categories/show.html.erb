@@ -1,0 +1,14 @@
+<div class="index-games-show">
+  <div class="parent-div-category-game-show">
+    <% @games.each do |game| %>
+      <div class="div-category-game-show">
+        <%= link_to game_path(game) do %>
+          <div class="content-of-the-div-category-game-show">
+              <h1><%= game.title %></h1>
+              <p><%= game.description %></p>
+          </div>
+        <% end %>
+      </div>
+    <% end  %>
+  </div>
+</div>
