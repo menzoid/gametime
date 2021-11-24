@@ -3,7 +3,7 @@
   <%# top games on the top %>
   <div class="top-games-index-page">
     <%# banner featured game %>
-    <%= link_to root_path do %>
+    <%= link_to game_path(@featured_game) do %>
     <div class="banner-top-feature-game-index bg-img-banner">
       <div class="banner-feature-content-game-index">
         <h1><%= @featured_game.title %></h1>
@@ -12,64 +12,27 @@
       </div>
     </div>
     <% end %>
+
     <%# side featured games %>
-    <div class="side-game-feature-game-index">
-      <% @games[0..2].each do |game| %>
-        <div class="div-game-index">
-          <div class="picture-of-the-div-game-index">
-            <%= link_to root_path do %>
-            <%= image_tag("/assets/image-random-boardGame.jpeg") %>
-            <% end %>
-          </div>
-          <div class="content-of-the-div-game-index">
-            <div class="content-of-the-div-game-index-p">
-              <p>Title :<%= game.title %></p>
-              <p>Difficulty :<%= game.difficulty %></p>
-              <p>Players require:<%= game.player_count %></p>
-              <p>Play Time :<%= game.play_time %></p>
-              <p>Price :<%= game.price %></p>
-            </div>
-          </div>
+  <div class="side-game-feature-game-index">
+    <% @games[0..2].each do |game| %>
+      <div class="div-game-index">
+        <%= link_to game_path(game) do %>
+        <div class="content-of-the-div-game-index  bg-img-banner">
         </div>
       <% end %>
-    </div>
+      </div>
+    <% end %>
+  </div>
   </div>
 
 
     <%# cards category div bottom %>
   <div class="category-main-div-game-index">
+    <% @categories.each do |category| %>
     <div class="category-layout-design-category-game-index">
-      
+      <p>Name</p><p><%= category.name %></p>
     </div>
+  <% end %>
   </div>
 </div>
-
-
-
-
-
-
-
-<!-- <div class="index-title-page"><h1>Games</h1></div>
-
-<div class="separation-of-the-carousel-cards"><h1>Those are the most views games of the moments</h1></div>
-
-<div class="index-games-show">
-<% @games[0..7].each do |game| %>
-  <div class="div-game-show">
-    <div class="picture-of-the-div-game-show">
-      <%= image_tag("/assets/image-random-boardGame.jpeg") %>
-    </div>
-    <div class="content-of-the-div-game-show">
-      <div class="content-of-the-div-game-show-p">
-        <p>Title: <%= game.title %></p>
-        <p>Difficulty: <%= game.difficulty %></p>
-        <p>Players require: <%= game.player_count %></p>
-        <p>Play Time: <%= game.play_time %></p>
-        <p>Price: <%= game.price %></p>
-      </div>
-    </div>
-  </div>
-    <% end %>
-</div>
--->

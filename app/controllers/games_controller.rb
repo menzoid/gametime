@@ -1,12 +1,14 @@
 class GamesController < ApplicationController
-  before_action :set_game, only: %i[show]
+  before_action :set_game, only: [:show]
+
   def index
     @featured_game = Game.all.sample
     @games = policy_scope(Game)
+    @categories = Category.all
   end
 
   def show
-    @game = Game.find(params[:id])
+    # @game = Game.find(params[:id])
     @game_category = @game.category
     @category_games = Category.find(@game_category.id).games.sample(5)
     authorize @game
