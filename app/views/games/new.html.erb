@@ -10,6 +10,7 @@
           <%= f.input :play_time, placeholder: '2 hrs' %>
           <%= f.input :price, placeholder: '13 eur' %>
           <%= f.input :description, placeholder: 'Conquer the universe blablabla.' %>
+          <%= f.input :photo, as: :file %>
           <%= f.association :category %>
           <%= f.submit class: 'btn btn-flat' %>
         <% end %>
