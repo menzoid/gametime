@@ -1,0 +1,79 @@
+.body-main-div-form-new-game{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+  padding: 50px 0;
+
+  color: $orange;
+}
+.container-form-new-game{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  width: 40%;
+  height: 90%;
+
+  background: rgba( 255, 255, 255, 0.60 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 3px );
+  -webkit-backdrop-filter: blur( 3px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.container-form-new-game h2{
+  font-size: 2.3rem;
+  font-family: monospace;
+}
+
+.parent-form-new-game{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 60%;
+}
+
+.child-form-new-game{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  height: 80%;
+  width: 60%;
+}
+
+// fields values for the username and password
+.child-form-new-game{
+  margin: 0 0 30px 0;
+}
+.child-form-new-game input{
+  width: 350px;
+  height: 40px;
+
+  border-radius: 12px;
+  border: $orange;
+}
+
+
+//submit button
+.actions-new{
+  padding: 4px 30px;
+  background: $orange;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  margin-bottom: 5px;
+
+  transition: var(--transition-time);
+}
+.actions-new:hover{
+  background: transparent;
+  border: 2px solid $dark;
+}
