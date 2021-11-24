@@ -2,8 +2,8 @@
   <h1 class="mb-4"><%= @game.title %></h1>
   <div class="d-flex justify-content-between mb-4">
     <div class="game-img">
-        <%=image_tag "Catan.jpg", height: 400, class: "game-img" %>
-        <%# <%= cl_image_path @game.photo.key, height: 300, crop: :fill %>
+        <%# <%=image_tag "Catan.jpg", height: 400, class: "game-img" %>
+        <%= cl_image_tag @game.photo.key, height: 400, width: 500, crop: :fill %>
     </div>
     <div class="w-80 mr-5 rent-form">
       <h3 class="header mb-0 pt-3">Rent Game</h3>
