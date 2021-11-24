@@ -9,6 +9,7 @@
       <p> <%=@game.description  %></p>
       <div class="container d-flex justify-content-between book-container p-0">
         <div class="col-sm">
+          <h4>Game Features</h4>
           <ul>
             <li>Player Count: <%= @game.player_count %> players</li>
             <li>Difficulty: <%= @game.difficulty %></li>
@@ -41,7 +42,8 @@
 
   </div>
 
-  <h5>More from <%=@game_category.name %> </h5>
+  <div class="container">
+  <h3>More in <%=@game_category.name %> </h5>
 
   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 
@@ -57,17 +59,17 @@
 
     <h1><%= @category_games[0].title %></h1>
       <%# <img class="d-block w-100" src="..." alt="First slide"> %>
-      <%=image_tag("boardGame.jpg") %>
+      <%=image_tag("boardGame.jpg", size:"500",class: "carrousel-pic") %>
     </div>
     <div class="carousel-item">
     <h1><%= @category_games[1].title %></h1>
       <%# <img class="d-block w-100" src="..." alt="Second slide"> %>
-      <%=image_tag("Catan.jpg") %>
+      <%=image_tag("Catan.jpg", size:"500", class: "carrousel-pic") %>
     </div>
     <div class="carousel-item">
     <h1><%= @category_games[2].title %></h1>
       <img class="d-block w-100" src="..." alt="Third slide">
-      <%=image_tag("carousel-category01.jpg") %>
+      <%=image_tag("carousel-category01.jpg", size:"500", class: "carrousel-pic") %>
     </div>
   </div>
 
@@ -79,5 +81,6 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
-</div>
+  </div>
+  </div>
 </div>
