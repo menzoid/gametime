@@ -1,6 +1,7 @@
 class GamesController < ApplicationController
   before_action :set_game, only: %i[show]
   def index
+    @featured_game = Game.all.sample
     @games = policy_scope(Game)
   end
 
