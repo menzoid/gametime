@@ -76,9 +76,11 @@
   border-radius:15px;
   margin: 0 20px;
 }
-.login-navbar a:hover{
-  color: $orange;
+// items dropdown when sign in color
+.dropdown-menu a:hover{
+  color: $dark;
 }
+
 
 // between element grows (DO NOT TOUCH!)
 .navbar-lewagon .navbar-collapse {
@@ -94,4 +96,11 @@
 .dropdown-menu{
   border: 10px;
   background: linear-gradient(320deg, $blue, $dark );
+  border-radius: 10px;
+  box-shadow: 0 0 5px $light;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; // remove the gap so it doesn't close
 }

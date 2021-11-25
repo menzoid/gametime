@@ -1,14 +1,14 @@
 <div class="index-games-show">
   <div class="parent-div-category-game-show">
     <% @games.each do |game| %>
-      <div class="div-category-game-show">
-        <%= link_to game_path(game) do %>
+      <%= link_to game_path(game) do %>
+        <div class="div-category-game-show">
           <div class="content-of-the-div-category-game-show">
-              <h1><%= game.title %></h1>
-              <p><%= game.description %></p>
+              <h1><%= truncate(game.title, length: 30) %></h1>
+              <p><%= truncate(game.description, length: 100) %></p>
           </div>
-        <% end %>
-      </div>
+        </div>
+      <% end %>
     <% end  %>
   </div>
 </div>

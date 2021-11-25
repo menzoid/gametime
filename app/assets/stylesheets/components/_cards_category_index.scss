@@ -13,9 +13,8 @@
 
 // top games title
 .top-games-title{
-  padding: 0 20px;
+  padding: 0 30px;
   margin-bottom: 25px;
-  // border-bottom: 2px solid $light;
   color: $light;
 }
 
@@ -35,27 +34,42 @@
   width: 68%;
   overflow: hidden;
   border-radius: 20px;
+  transition: var(--transition-time);
+}
+.banner-top-feature-game-index:hover{
+  box-shadow: 0 0 5px $light;
+}
+.banner-top-feature-game-index a:hover{
+  text-decoration: none;
+}
+.banner-top-feature-game-index img{
+  width: 100%;
 }
 .bg-img-banner {
   background-image: asset-url('image-random-boardGame.jpg');
   background-size: cover;
 }
-.banner-top-feature-game-index img{
-  width: 100%;
-}
 // content feature banner top
 .banner-feature-content-game-index{
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: flex-start;
 
   height: 100%;
-  width: 80%;
-
-  margin-left: 20px;
+  width: 100%;
 }
-
+.banner-feature-content-game-index h1{
+  margin: 0;
+  // font-weight: 600;
+}
+.banner-feature-content-game-index-bg{
+  width: 100%;
+  padding-top: 10px;
+  padding-left: 30px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: $light;
+}
 // feature side games top page values
 .side-game-feature-game-index{
   height: 100%;
@@ -79,7 +93,9 @@
 .div-game-index img {
   width: 100%;
 }
-
+.div-game-index:hover{
+  transform: scale(1.05);
+}
 // image on the side of the feature game
 .image-side-content-feature-game{
   height: 90%;
@@ -123,24 +139,25 @@
 
   width: 250px;
   height: 300px;
-  transform: skew(5deg);
   border-radius: 20px;
+  transition: var(--transition-time);
 }
 .category-layout-design-category-game-index p{
-  transform: skew(-5deg);
   border: 2px solid $orange;
   padding: 2px 20px;
   border-radius: 20px;
   transition: var(--transition-time);
 }
+.category-layout-design-category-game-index:hover{
+  transform: skew(5deg);
+}
 .category-layout-design-category-game-index p:hover{
+  transform: skew(-5deg);
   background-color: $orange;
 }
 .category-main-div-game-index a{
   text-decoration: none;
 }
-
-
 
 
 //cards category for HOME PAGE
@@ -155,7 +172,6 @@
 }
 .boxing-div-category-home-page{
   display: flex;
-  //flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
 
@@ -170,4 +186,9 @@
 }
 .content-div-category-home-page img{
   width: 100%;
+}
+
+
+h1{
+    font-weight: 600;
 }

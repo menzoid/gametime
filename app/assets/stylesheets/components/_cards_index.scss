@@ -1,53 +1,49 @@
 .index-games-show{
-  display: grid;
-  justify-items: center;
-  grid-template-columns: auto auto auto auto;
   width: 100%;
-  margin: 50px 0;
+  padding: 50px 0;
 }
 
 .parent-div-category-game-show{
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  height: 150px;
-  width: 20%;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-row-gap: 50px;
+  justify-content: space-evenly;
 
   border-radius: 20px;
-  cursor: pointer;
 }
-
+.parent-div-category-game-show a:hover{
+  text-decoration: none;
+}
 .div-category-game-show{
-  position: absolute;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  bottom: 0;
 
-  height: 50px;
-  width: 100%;
+  width: 300px;
+  height: 200px;
   padding: 5px 20px;
 
   background: rgba(255, 255, 255, 0);
   backdrop-filter: blur(10px);
-  transform: scale(0.9);
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
   overflow: hidden;
   border-radius: 20px;
+  cursor: pointer;
+  transition: var(--transition-time);
+}
+.div-category-game-show:hover{
+  transform: scale(1.1);
+}
 
+.content-of-the-div-category-game-show p{
   color: $light;
-  font-size: 10px;
   font-family: monospace;
+  font-size: 10px;
 }
-
-.div-category-game-show h1 p{
-  font-size: 0.8em;
-}
-
-.div-category-game-show:hover .div-category-game-show{
-  height: 150px;
+.content-of-the-div-category-game-show h1{
+  color: $light;
+  font-family: monospace;
+  font-size: 20px;
 }

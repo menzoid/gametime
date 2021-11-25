@@ -4,15 +4,16 @@
   <h1 class="top-games-title mt-2">Top games featured</h1>
   <div class="top-games-index-page">
     <%# banner featured game %>
-    <%= link_to game_path(@featured_game) do %>
     <div class="banner-top-feature-game-index bg-img-banner">
+      <%= link_to game_path(@featured_game) do %>
       <div class="banner-feature-content-game-index">
+        <div class="banner-feature-content-game-index-bg">
         <h1><%= @featured_game.title %></h1>
         <p><%= @featured_game.description %></p>
-        <button class="button-game-home-page"><%= link_to 'Games', game_path(@featured_game) %></button>
+        </div>
       </div>
-    </div>
     <% end %>
+  </div>
 
     <%# side featured games %>
   <div class="side-game-feature-game-index">
