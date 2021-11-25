@@ -2,10 +2,45 @@
   <div class="parent-div-category-game-show">
     <% @games.each do |game| %>
       <%= link_to game_path(game) do %>
+      <div>
+        <div>
+          <i class="fas fa-users fa-sm"></i>
+          <%= game.player_count %> +
+        </div>
         <div class="div-category-game-show">
+          <% if game.photo.attached? %>
+          <div class="daddy-div-image-game-card-index"  style="background-image: url(<%= cl_image_path game.photo.key %>) ;">
+          <% else %>
+          <div class="daddy-div-image-game-card-index"  style="background-image: url(<%= image_path 'battleship.jpg' %>) ;">
+          <% end %>
+        </div>
+      </div>
           <div class="content-of-the-div-category-game-show">
-              <h1><%= truncate(game.title, length: 30) %></h1>
-              <p><%= truncate(game.description, length: 100) %></p>
+            <div>
+              <h1><%= truncate(game.title, length: 20) %></h1>
+            </div>
+              <hr style="width: 80%; margin: 0;">
+              <p><%= truncate(game.description, length: 50) %></p>
+          <!-- <div class="game-feature-card-index" style="list-style: none; color:white; font-size: 12px;">
+            <div>
+              <i class="fas fa-users fa-sm"></i>
+              <%= game.player_count %> +
+            </div>
+              |
+            <div>
+              Difficulty:
+                <% game.difficulty.times do  %>
+                  <i class="fas fa-crown fa-sm"></i>
+                  <% end %>
+                <% (5 - game.difficulty).times do  %>
+                  <i class="fas fa-crown fa-sm crown-opa"></i>
+                  <% end %>
+            </div>
+              |
+            <div>
+              <i class="fas fa-user-clock"></i> <%= game.play_time.round(1) %>H
+            </div>
+          </div>-->
           </div>
         </div>
       <% end %>

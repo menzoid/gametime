@@ -20,30 +20,57 @@
   justify-content: flex-end;
   align-items: center;
 
-  width: 300px;
-  height: 200px;
-  padding: 5px 20px;
+  width: 320px;
+  height: 300px;
+  padding: 15px 15px;
 
   background: rgba(255, 255, 255, 0);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-  overflow: hidden;
-  border-radius: 20px;
+  border-radius: 30px;
   cursor: pointer;
   transition: var(--transition-time);
+  background-size: cover;
 }
 .div-category-game-show:hover{
   transform: scale(1.1);
 }
+.daddy-div-image-game-card-index{
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  border-radius: 20px 20px 0 0;
 
-.content-of-the-div-category-game-show p{
-  color: $light;
-  font-family: monospace;
-  font-size: 10px;
+
 }
-.content-of-the-div-category-game-show h1{
+.div-category-game-show img{
+  width: 100%;
+  overflow: hidden;
+  border-radius: 20px 20px 0 0;
+  margin-bottom: 20px;
+}
+
+
+.content-of-the-div-category-game-show{
+  margin-top: 15px;
+  min-height: 10vh;
+
+p{
   color: $light;
   font-family: monospace;
-  font-size: 20px;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+h1{
+  color: $light;
+  font-family: monospace;
+  font-size: 23px;
+}
+}
+
+// this is the list features index
+.game-feature-card-index{
+  display: flex;
+  justify-content: space-evenly;
 }

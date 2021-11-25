@@ -34,9 +34,10 @@
   <div class="category-main-div-game-index">
     <% @categories.each do |category| %>
     <%= link_to category_path(category) do %>
-    <div class="category-layout-design-category-game-index">
-      <p><%= category.name %></p>
-    </div>
+      <div class="category-layout-design-category-game-index">
+        <%= cl_image_tag category.photo %>
+        <p><%= category.name %></p>
+      </div>
     <% end %>
   <% end %>
   </div>
