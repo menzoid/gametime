@@ -1,1 +1,27 @@
 // Specific CSS for your home-page
+.about-section {
+  h2 {
+    text-align: center;
+    margin-bottom: 3em;
+  }
+}
+
+.home-card {
+  background-color: $blue;
+  width: 30%;
+  text-align: center;
+  padding: 70px 0;
+  height: 280px;
+  border-radius: 10px;
+
+  p {
+    margin: 0;
+    text-align: center;
+  }
+}
+
+.home-icon {
+  color: $orange;
+  font-size: 60px;
+  margin-bottom: 20px;
+}
