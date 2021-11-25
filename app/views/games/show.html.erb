@@ -1,4 +1,4 @@
-<div class="container mt-5 mb-5 w-1200 p-4 game-show">
+<div class="container mt-5 mb-5 w-1000 p-4 game-show">
   <h1 class="mb-4"><%= @game.title %></h1>
   <div class="d-flex justify-content-between mb-4">
     <div class="game-img">
@@ -19,7 +19,7 @@
       </form>
     </div>
   </div>
-  <ul class="list-inline tabs-underlined mb-3">
+  <%# <ul class="list-inline tabs-underlined mb-3">
     <li>
       <a href="#" class="tab-underlined active">Description</a>
     </li>
@@ -29,15 +29,30 @@
     <li>
       <a href="#" class="tab-underlined">Reviews</a>
     </li>
-  </ul>
+  </ul> %>
 
-
-
-  <div class="d-flex justify-content-around mb-2 mt-2 info-section">
+<ul class="nav nav-tabs list-inline tabs-underlined mb-3" id="myTab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <a class="nav-link active tab-underlined" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Description</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link tab-underlined" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Details</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link tab-underlined" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Reviews</a>
+  </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+    <div class="mb-2 mt-4  p-5 info-section">
       <div>
         <h4>Description</h4>
         <p class="game-description"> <%=@game.description  %></p>
       </div>
+    </div>
+  </div>
+  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+    <div class="mb-2 mt-2 p-5 info-section">
       <div class="">
             <h4>Game Features</h4>
             <ul>
@@ -45,5 +60,8 @@
               <li>Difficulty: <%= @game.difficulty %></li>
               <li>Play time: <%= @game.play_time.round(1) %>hours</li>
       </div>
+    </div>
   </div>
+  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">test3</div>
+</div>
 </div>
