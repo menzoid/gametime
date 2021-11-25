@@ -1,0 +1,44 @@
+<h1>My Orders</h1>
+
+<h2>Money Losers</h2>
+<table style="width:100%">
+  <tr>
+    <th>Game</th>
+    <th>Owner</th>
+   <th>From</th>
+   <th>To</th>
+   <th>Total Time</th>
+   <th>Status?</th>
+  </tr>
+  <% @bookings.each do |booking| %>
+  <tr>
+    <td><%=booking.user.user_name%></td>
+    <td><%=booking.user.first_name%></td>
+    <td>params do form</td>
+    <td>params do form</td>
+    <td>Conta</td>
+  </tr>
+<% end %>
+</table>
+
+<h2>Money Makers</h2>
+
+<table style="width:100%">
+
+  <tr>
+    <th>Game</th>
+   <th>From</th>
+   <th>To</th>
+   <th>Total Time</th>
+   <th>Money Made</th>
+  </tr>
+  <% @bookings.each do |booking| %>
+  <tr>
+    <td><%=booking.username%></td>
+    <td><%=booking.user.first_name%></td>
+    <td>params do form</td>
+    <td>params do form</td>
+    <td>Conta</td>
+  </tr>
+<% end %>
+</table>

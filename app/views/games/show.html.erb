@@ -81,3 +81,20 @@
     </div>
   </div>
 </div>
+
+
+
+    <div class="show-buttons">
+      <% if @game.user_id == current_user.id %>
+        <%= "" %>
+      <% else %>
+      <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#gameModal">
+        Rent now
+       </button>
+      <% end %>
+    </div>
+    </div>
+  </div>
+  <%= render 'modal_new', game: @game, booking: @booking %>
+
+</div>
