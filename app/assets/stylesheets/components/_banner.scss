@@ -30,7 +30,7 @@
   border: 1px solid transparent;
   background: $orange;
   border-radius:15px;
-  margin: 0 20px;
+  margin-top: 20px;
 
   transition: var(--transition-time);
 }
@@ -40,13 +40,8 @@
   transition: var(--transition-time);
 }
 .button-game-home-page:hover{
-  border: 1px solid $orange;
-  background: transparent;
-  border-radius:15px;
-  margin: 0 20px;
-  color: $orange;
+  background: $green;
 }
 .button-game-home-page a:hover{
   text-decoration: none;
-  color: $orange;
 }
