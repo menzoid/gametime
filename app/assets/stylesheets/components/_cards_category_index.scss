@@ -59,6 +59,10 @@
   height: 100%;
   width: 100%;
 }
+.banner-feature-content-game-index h1{
+  margin: 0;
+  // font-weight: 600;
+}
 .banner-feature-content-game-index-bg{
   width: 100%;
   padding-top: 10px;
@@ -182,4 +186,9 @@
 }
 .content-div-category-home-page img{
   width: 100%;
+}
+
+
+h1{
+    font-weight: 600;
 }

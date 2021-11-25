@@ -39,7 +39,9 @@
   align-items: center;
   width: 60%;
 }
-
+.parent-form-new-game h3{
+  font-weight: 600;
+}
 .child-form-new-game{
   display: flex;
   flex-direction: column;
