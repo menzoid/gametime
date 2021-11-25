@@ -8,11 +8,10 @@
    <th>From</th>
    <th>To</th>
    <th>Total Time</th>
-   <th>Status?</th>
   </tr>
   <% @bookings.each do |booking| %>
   <tr>
-    <td><%=booking.user.user_name%></td>
+    <td><%=booking.user.username%></td>
     <td><%=booking.user.first_name%></td>
     <td>params do form</td>
     <td>params do form</td>
@@ -34,9 +33,11 @@
   </tr>
   <% @bookings.each do |booking| %>
   <tr>
-    <td><%=booking.username%></td>
+    <td><%=booking.user.username%></td>
     <td><%=booking.user.first_name%></td>
-    <td>params do form</td>
+    <%n_days=booking.end_date - booking.start_date %>
+    <td><%= n_days.to_i %></td>
+    <td><%= n_days.to_i * booking.game.price %></td>
     <td>params do form</td>
     <td>Conta</td>
   </tr>

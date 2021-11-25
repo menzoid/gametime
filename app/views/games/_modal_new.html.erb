@@ -9,6 +9,7 @@
       </div>
         <%= simple_form_for [game,booking] do |f| %>
       <div class="modal-body">
+       <p>Price per day: <%= @game.price %>eur</p>
          <%= f.input :start_date %>
          <%= f.input :end_date %>
       </div>
