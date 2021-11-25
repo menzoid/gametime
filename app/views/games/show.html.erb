@@ -2,8 +2,11 @@
   <h1 class="mb-4"><%= @game.title %></h1>
   <div class="d-flex justify-content-between mb-4">
     <div class="game-img">
-        <%# <%=image_tag "Catan.jpg", height: 400, class: "game-img" %>
+      <% if @game.photo.attached? %>
         <%= cl_image_tag @game.photo.key, height: 400, width: 500, crop: :fill %>
+      <% else %>
+        <%=image_tag "Catan.jpg", height: 400, class: "game-img" %>
+      <% end %>
     </div>
     <div class="w-80 mr-5 rent-form">
       <h3 class="header mb-0 pt-3">Rent Game</h3>
@@ -49,16 +52,25 @@
         <h4>Description</h4>
         <p class="game-description"> <%=@game.description  %></p>
       </div>
-    </div>
-  </div>
-  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+   <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
     <div class="mb-2 mt-2 p-5 info-section">
-      <div class="">
-            <h4>Game Features</h4>
-            <ul>
-              <li>Player Count: <%= @game.player_count %> players</li>
-              <li>Difficulty: <%= @game.difficulty %></li>
-              <li>Play time: <%= @game.play_time.round(1) %>hours</li>
+      <div class="game-features">
+        <h4>Game Features</h4>
+          <ul>
+            <li>
+            <i class="fas fa-users fa-lg"></i>
+            <%= @game.player_count %> +
+            </li>
+            <li>Difficulty:
+            <% @game.difficulty.times do  %>
+              <i class="fas fa-crown fa-lg"></i>
+              <% end %>
+            <% (5 - @game.difficulty).times do  %>
+              <i class="fas fa-crown fa-lg crown-opa"></i>
+              <% end %>
+            </li>
+            <li>Play time: <%= @game.play_time.round(1) %>hours</li>
+          </ul>
       </div>
     </div>
   </div>
