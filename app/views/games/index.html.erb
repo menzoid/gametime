@@ -1,5 +1,12 @@
 <%# body div for the page %>
 <div class="body-main-index-page">
+  <div class="back-button-link">
+    <%= link_to 'javascript:history.go(-1);' do %>
+      <div class="back-button">
+        <p>Back</p>
+      </div>
+    <% end %>
+  </div>
   <%# top games on the top %>
   <h1 class="top-games-title mt-2">Top games featured</h1>
   <div class="top-games-index-page">
