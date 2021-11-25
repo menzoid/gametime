@@ -75,14 +75,18 @@
   height: 100%;
   width: 25%;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: grid;
+  grid-row-gap: 20px;
+  grid-column-gap: 20px;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  justify-items: center;
+  align-items: center;
 }
 
 .div-game-index{
   width: 100%;
-  height: 30%;
+  height: 100%;
   border-radius: 20px;
 
   overflow: hidden;
