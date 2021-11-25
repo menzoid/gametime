@@ -28,3 +28,8 @@ document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
 });
+
+var someTabTriggerEl = document.querySelector('#someTabTrigger')
+var tab = new bootstrap.Tab(someTabTriggerEl)
+
+tab.show()
