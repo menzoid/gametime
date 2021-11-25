@@ -4,9 +4,11 @@ Rails.application.routes.draw do
 
   resources :games do
     resources :bookings, only: %i[new create]
+    resources :reviews, only: [:create, :new]
   end
 
   resources :categories, only: :show
+  resources :reviews, only: [:destroy]
 
   #resources :bookings, only: %i[update]
   get "dashboard", to: "pages#dashboard"

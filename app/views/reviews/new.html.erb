@@ -1,0 +1,15 @@
+<div class="container mt-5">
+  <div class="form-header mb-5">
+  <h4>Add a review to your  <strong> <%= @game.title %> </strong></h4>
+  <%# <%= link_to "Back", lists_path, class: "btn btn-flat mt-5" %>
+  </div>
+  <%= simple_form_for [ @game, @review ] do |f| %>
+    <%= f.input :comment %>
+    <%= f.input :rating%>
+    <div class="form-action mt-4">
+      <%= f.button :submit, "Add review", class: "btn btn-primary" %>
+
+      <%= link_to "Back", game_path(@game), class: "btn btn-primary" %>
+    </div>
+  <% end %>
+</div>
