@@ -11,6 +11,7 @@ class GamesController < ApplicationController
     # @game = Game.find(params[:id])
     @game_category = @game.category
     @category_games = Category.find(@game_category.id).games.sample(5)
+    @booking = Booking.new
     authorize @game
   end
 
