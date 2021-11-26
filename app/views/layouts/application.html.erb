@@ -15,6 +15,7 @@
   <body>
     <%= render 'shared/navbar' %>
     <%= yield %>
+    <% if !current_page?(controller: 'devise') %>
     <%= render 'shared/footer' %>
   </body>
 </html>
