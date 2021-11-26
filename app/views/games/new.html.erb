@@ -4,11 +4,11 @@
         <h3 class="mt-4">Create a new game</h3>
       <div class="child-form-new-game">
         <%= simple_form_for @game do |f| %>
-          <%= f.input :title, placeholder: 'Catan' %>
-          <%= f.input :difficulty, placeholder: 'Hard' %>
+          <%= f.input :title, placeholder: 'Monopoly' %>
+          <%= f.input :difficulty, placeholder: '1/5' %>
           <%= f.input :player_count, placeholder: '2' %>
           <%= f.input :play_time, placeholder: '2 hrs' %>
-          <%= f.input :price, placeholder: 'Pricing' %>
+          <%= f.input :price, placeholder: 'Price' %>
           <%= f.input :description, placeholder: 'Conquer the universe blablabla.' %>
           <%= f.input :photo, as: :file %>
           <%= f.association :category %>
