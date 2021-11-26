@@ -12,7 +12,7 @@ class GamesController < ApplicationController
     @game_category = @game.category
     @category_games = Category.find(@game_category.id).games.sample(5)
     @booking = Booking.new
-
+    @reviews = @game.reviews
     authorize @game
   end
 

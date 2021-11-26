@@ -77,7 +77,20 @@
       </div>
     </div>
     <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-      test3
+            <%= link_to "Add Review", new_game_review_path(@game), class: "btn button-game-home-page mt-4" %>
+        <% @reviews.each do |review|  %>
+          <div class="notification">
+            <img src='https://thumbs.dreamstime.com/b/popcorn-striped-basket-eps-vector-illustration-white-background-64124737.jpg' class="avatar-large"/>
+            <div class="notification-content">
+              <p><small><%= review.rating %> stars</small> reviewed at <% review.created_at  %></p>
+              <p><%= review.comment %></p>
+            </div>
+
+            <div class="notification-actions">
+              <%= link_to 'Delete', review_path(review), method: :delete, class: "far fa-trash-alt" %>
+            </div>
+          </div>
+        <% end %>
     </div>
   </div>
 </div>
