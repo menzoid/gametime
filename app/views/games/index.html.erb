@@ -19,7 +19,7 @@
         <%= cl_image_tag @featured_game.photo.key %>
         <div class="banner-feature-content-game-index-bg">
         <h1><%= @featured_game.title %></h1>
-        <p><%= @featured_game.description %></p>
+        <p><%= truncate(@featured_game.description, length: 300) %></p>
         </div>
       </div>
     <% end %>
