@@ -30,7 +30,19 @@
   width: 100%;
   margin-left: 10%;
 }
-
+.container-banner input{ ////// ------------------------------------------ button on home page banner
+  padding: 10px 30px;
+  border-radius: 30px;
+  background-color: $orange;
+  border: 2px solid $light;
+  color: $light;
+  transition: var(--transition-time);
+}
+.container-banner input:hover{
+  background: transparent;
+  border: 2px solid $orange;
+  color: $orange;
+}
 // button banner
 .button-game-home-page{
   text-align: center;
