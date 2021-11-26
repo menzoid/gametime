@@ -1,3 +1,4 @@
+
 // index category page
 // body of the page
 .body-main-index-page{
@@ -8,7 +9,6 @@
 
   height: 100%;
   width: 100%;
-  margin-top: 20px;
   margin-bottom: 200px;
 }
 
@@ -37,8 +37,8 @@
   border-radius: 20px;
   transition: var(--transition-time);
 }
-.banner-top-feature-game-index:hover{
-  box-shadow: 0 0 5px $light;
+.banner-top-feature-game-index:hover{ //// ------------------------------ transition when hover for th ebanner
+  transform: scale(1.02);
 }
 .banner-top-feature-game-index a:hover{
   text-decoration: none;
@@ -50,14 +50,14 @@
   background-image: asset-url('image-random-boardGame.jpg');
   background-size: cover;
 }
-// content feature banner top
+// ---------------------------------------------content feature banner top
 .banner-feature-content-game-index{
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
 
-  height: 100%;
+  height: 100%;  ///----------------- properties of the baner
   width: 100%;
 }
 .banner-feature-content-game-index h1{
@@ -71,7 +71,7 @@
   background-color: rgba(0, 0, 0, 0.4);
   color: $light;
 }
-// feature side games top page values
+//------------------------------------------- feature side games top page values
 .side-game-feature-game-index{
   height: 100%;
   width: 25%;
@@ -84,46 +84,51 @@
   justify-items: center;
   align-items: center;
 }
+.side-game-feature-game-index a:hover{
+  text-decoration: none;
+}
 
-.div-game-index{
+///--------------------------------------container image for image side
+.div-game-index{ ////--------------------------------------- properties of the sides cards of the banner
   width: 100%;
   height: 100%;
   border-radius: 20px;
 
   overflow: hidden;
+  transition: var(--transition-time);
 }
 .div-game-index p {
-    color: $light;
+  color: $light;
 }
 .div-game-index img {
   width: 100%;
 }
-.div-game-index:hover{
+.div-game-index:hover{  //// ------------------------------ transition when hover
   transform: scale(1.05);
 }
-// image on the side of the feature game
-.image-side-content-feature-game{
-  height: 90%;
-  width: 20%
-}
-.image-side-content-feature-game img{
-  width: 100%;
-  background-size: cover;
-}
+
 // inside div content displayer values
 .content-of-the-div-game-index{
+  position: relative;
   display: flex;
   justify-content: center;
+  align-items: flex-end;
 
   height: 100%;
   width: 100%;
+
+  font-size:20px;
+  font-weight: 600;
 }
 
-.content-of-the-div-game-index p{
-  font-size:10px;
-  margin: 0;
+.child-content-of-the-div-game-index{ //// ------------------------------------ this is the bottom title side card values
+  position: absolute;
+  color: $light;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  text-align: center;
+  padding: 3px 0;
 }
-
 
 // category bottom part
 .category-main-div-game-index{

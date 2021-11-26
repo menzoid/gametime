@@ -1,5 +1,10 @@
+//// --------------------------------- this is th eback button css part ----------------------------------///
 .back-button-link {
-  margin-right: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 1%;;
+  margin-left: 2%;
 }
 .back-button-link a{
   text-decoration: none;
@@ -13,10 +18,11 @@
   color: $orange;
 }
 .back-button:hover{
-  transform: skew(5deg);
+  transition: var(--transition-time);
+  transform: scale(1.15);
 }
 .back-button p:hover{
-  transform: skew(-5deg);
   background-color: $orange;
-  color: $blue;
+  color: $dark;
 }
+//// --------------------------------- this is th eback button css part ----------------------------------///

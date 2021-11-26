@@ -1,19 +1,22 @@
-<%# body div for the page %>
+<!------------------------------- this is th eback button part ---------->
+        <div class="back-button-link">
+          <%= link_to 'javascript:history.go(-1);' do %>
+            <div class="back-button">
+              <p>Back</p>
+            </div>
+          <% end %>
+        </div>
+<!------------------------------- this is th eback button part ---------->
+<!----------------------------------- body div for the page ------------------------>
 <div class="body-main-index-page">
-  <div class="back-button-link">
-    <%= link_to 'javascript:history.go(-1);' do %>
-      <div class="back-button">
-        <p>Back</p>
-      </div>
-    <% end %>
-  </div>
   <%# top games on the top %>
-  <h1 class="top-games-title mt-2">Top games featured</h1>
+  <h1 class="top-games-title">Top games featured</h1>
   <div class="top-games-index-page">
     <%# banner featured game %>
-    <div class="banner-top-feature-game-index bg-img-banner">
+    <div class="banner-top-feature-game-index">
       <%= link_to game_path(@featured_game) do %>
       <div class="banner-feature-content-game-index">
+        <%= image_tag @featured_game.photo %>
         <div class="banner-feature-content-game-index-bg">
         <h1><%= @featured_game.title %></h1>
         <p><%= @featured_game.description %></p>
@@ -27,8 +30,12 @@
     <% @games[0..3].each do |game| %>
       <div class="div-game-index">
         <%= link_to game_path(game) do %>
-        <div class="content-of-the-div-game-index  bg-img-banner">
-        </div>
+          <div class="content-of-the-div-game-index">
+            <%= image_tag game.photo %>
+              <div class ="child-content-of-the-div-game-index">
+                <%= game.title %>
+              </div>
+            </div>
       <% end %>
       </div>
     <% end %>
