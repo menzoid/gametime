@@ -28,7 +28,7 @@ Category.create!(name: 'Strategy', photo: 'https://res.cloudinary.com/menzoid/im
 Category.create!(name: 'Deck Builder', photo: 'https://res.cloudinary.com/menzoid/image/upload/v1637938234/CategoryGameTime/DominionSeasideCards_astitn.jpg')
 Category.create!(name: 'Family', photo: 'https://res.cloudinary.com/menzoid/image/upload/v1637937864/CategoryGameTime/familly_ukzows.jpg')
 Category.create!(name: 'Roll & Move', photo: 'https://res.cloudinary.com/menzoid/image/upload/v1637937863/CategoryGameTime/rolll_and_mmove_kq0dyt.jpg')
-Category.create!(name: 'War game', photo: 'https://res.cloudinary.com/menzoid/image/upload/v1637938343/CategoryGameTime/war-of-the-ring_vilzio.png')
+Category.create!(name: 'War game', photo: 'https://res.cloudinary.com/menzoid/image/upload/v1637938978/CategoryGameTime/sign-up-form-bg01_kkuxug.jpg')
 Category.create!(name: 'Educational', photo: 'https://res.cloudinary.com/menzoid/image/upload/v1637937864/CategoryGameTime/education_zidv0a.jpg')
 
 puts "added categories"
