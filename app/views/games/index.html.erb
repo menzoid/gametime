@@ -40,11 +40,14 @@
   <h1 class="top-games-title mt-5">Categories</h1>
   <div class="category-main-div-game-index">
     <% @categories.each do |category| %>
-    <%= link_to category_path(category) do %>
-    <div class="category-layout-design-category-game-index">
-      <p><%= category.name %></p>
-    </div>
+      <%= link_to category_path(category) do %>
+        <div class="category-layout-design-category-game-index">
+          <%= cl_image_tag category.photo %>
+          <div>
+          <p><%= category.name %></p>
+          </div>
+        </div>
+      <% end %>
     <% end %>
-  <% end %>
   </div>
 </div>

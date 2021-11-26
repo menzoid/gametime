@@ -9,6 +9,7 @@
   height: 100%;
   width: 100%;
   margin-top: 20px;
+  margin-bottom: 200px;
 }
 
 // top games title
@@ -130,21 +131,30 @@
   height: 100%;
   display: grid;
   justify-items: center;
-  grid-row-gap: 50px;
+  grid-row-gap: 100px;
   grid-template-columns: auto auto auto auto;
+  margin-top: 75px;
 }
+
+// this is the design of the card for the neumorphism
 .category-layout-design-category-game-index{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
 
-  background-color: aqua;
+  background: linear-gradient(225deg, #34364e, #2c2d42); ///----------------------- those are the values for the neumorphism
+  box-shadow:  -30px 30px 60px #2a2b3e,
+                30px -30px 60px #383a54;
 
   width: 250px;
   height: 300px;
   border-radius: 20px;
   transition: var(--transition-time);
+  overflow: hidden;
+}
+.category-layout-design-category-game-index img{
+  height: 100%;
 }
 .category-layout-design-category-game-index p{
   border: 2px solid $orange;
