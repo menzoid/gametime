@@ -15,7 +15,7 @@
   <body>
     <%= render 'shared/navbar' %>
     <%= yield %>
-    <% if !current_page?(controller: '/devise/registrations', action: 'new') %>
+    <% if !current_page?(controller: '/devise/registrations', action: 'new') && !current_page?(controller: '/devise/sessions', action: 'new')%>
       <%= render 'shared/footer' %>
     <% end %>
   </body>
