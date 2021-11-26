@@ -13,6 +13,10 @@ class GamesController < ApplicationController
     @category_games = Category.find(@game_category.id).games.sample(5)
     @booking = Booking.new
     @reviews = @game.reviews
+    @markers = [{
+      lat: @game.latitude,
+      lng: @game.longitude
+    }]
     authorize @game
   end
 
