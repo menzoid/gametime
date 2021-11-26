@@ -119,6 +119,10 @@
 
   font-size:20px;
   font-weight: 600;
+  background-size: cover;
+}
+.content-of-the-div-game-index img{
+  object-fit: contain;
 }
 
 .child-content-of-the-div-game-index{ //// ------------------------------------ this is the bottom title side card values
