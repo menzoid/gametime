@@ -83,10 +83,10 @@
       <div class="mb-2 mt-4  p-5 info-section">
         <%= link_to "Add Review", new_game_review_path(@game), class: "btn button-game-home-page mt-4" %>
         <% @reviews.each do |review|  %>
-          <div class="notification">
-            <img src='https://thumbs.dreamstime.com/b/popcorn-striped-basket-eps-vector-illustration-white-background-64124737.jpg' class="avatar-large"/>
+          <div class="notification mt-4">
+            <%= image_tag "icon-navbar-gametime.png", class: "avatar-large" %>
             <div class="notification-content">
-              <p><small><%= review.rating %> stars</small> reviewed at <% review.created_at  %></p>
+              <p><small><%= review.rating %> stars</small></p>
               <p><%= review.comment %></p>
             </div>
 

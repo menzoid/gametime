@@ -9,7 +9,6 @@ class ReviewsController < ApplicationController
     @review = Review.new(review_params)
     @game = Game.find(params[:game_id])
     @review.game = @game
-    @review.user = current_user
     authorize @review
     if @review.save
       redirect_to game_path(@game)
