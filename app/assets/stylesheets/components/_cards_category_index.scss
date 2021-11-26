@@ -142,7 +142,7 @@
 }
 
 // this is the design of the card for the neumorphism
-.category-layout-design-category-game-index{
+.parent-category-layout-design-category-game-index{
   position: relative;
   display: flex;
   flex-direction: column;
@@ -150,30 +150,42 @@
   justify-content: flex-end;
 
   background: linear-gradient(225deg, #34364e, #2c2d42); ///----------------------- those are the values for the neumorphism
-  box-shadow:  -30px 30px 60px #2a2b3e,
-                30px -30px 60px #383a54;
+  box-shadow:-2px 2px 5px rgba(224, 122, 95, 0.3),
+          2px -2px 5px rgba(239, 187, 173, 0.3);
 
   width: 250px;
-  height: 300px;
+  height: 320px;
   border-radius: 20px;
   transition: var(--transition-time);
   overflow: hidden;
 }
-.category-layout-design-category-game-index img{
-  height: 100%;
-}
-.category-layout-design-category-game-index p{
+.parent-category-layout-design-category-game-index p{
   border: 2px solid $orange;
   padding: 2px 20px;
   border-radius: 20px;
   color: $orange;
   font-size: 18px;
+  text-align: center;
   transition: var(--transition-time);
 }
-.category-layout-design-category-game-index:hover{ //// ------------------------------animation time baby
+.parent-category-layout-design-category-game-index:hover{//// ------------------------------animation time baby
   animation-duration: 1s;
   animation-name: dropDivAnim;
 }
+.category-layout-design-category-game-index{
+  height: 100%;
+  width: 93%;
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.category-layout-design-category-game-index img{
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+  margin-bottom: 20px;
+}
+
 @keyframes dropDivAnim { //// -----------------------------those are the category animation
   0% {
     box-shadow:  -30px 30px 60px #2a2b3e,
