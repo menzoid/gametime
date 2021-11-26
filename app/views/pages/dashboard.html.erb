@@ -72,6 +72,7 @@
     <th>Total Time</th>
     <th>Rental Total</th>
   </tr>
+
   <% @bookings.each do |booking| %>
   <tr>
     <td><%= booking.game.title %></td>
@@ -97,16 +98,18 @@
     <th>Total Time</th>
     <th>Money Made</th>
   </tr>
-  <% @bookings.each do |booking| %>
-  <tr>
-    <td><%= booking.game.title %></td>
-    <td><%=booking.user.username%></td>
-    <td><%= booking.start_date %></td>
-    <td><%= booking.end_date %></td>
-    <%n_days=booking.end_date - booking.start_date %>
-    <td><%= n_days.to_i %></td>
-    <td><%= n_days.to_i * booking.game.price %></td>
-  </tr>
-<% end %>
+  <% @bookings_received.each do |booking| %>
+    <%if booking.game.user.email == current_user.email  %>
+    <tr>
+      <td><%= booking.game.title %></td>
+      <td><%=booking.user.username%></td>
+      <td><%= booking.start_date %></td>
+      <td><%= booking.end_date %></td>
+      <%n_days=booking.end_date - booking.start_date %>
+      <td><%= n_days.to_i %></td>
+      <td><%= n_days.to_i * booking.game.price %></td>
+    </tr>
+    <% end %>
+  <% end %>
 </table>
 </div>
