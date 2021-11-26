@@ -2,12 +2,15 @@ class ReviewsController < ApplicationController
   def new
     @game = Game.find(params[:game_id])
     @review = Review.new
+    authorize @review
   end
 
   def create
     @review = Review.new(review_params)
     @game = Game.find(params[:game_id])
     @review.game = @game
+    @review.user = current_user
+    authorize @review
     if @review.save
       redirect_to game_path(@game)
     else
@@ -16,6 +19,7 @@ class ReviewsController < ApplicationController
   end
 
   def destroy
+    authorize @review
     @review = Review.find(params[:id])
     @review.destroy
 
@@ -28,4 +32,8 @@ class ReviewsController < ApplicationController
   def review_params
     params.require(:review).permit(:comment, :rating)
   end
+
+  # def find_user
+  #   @user = current_user.id
+  # end
 end
