@@ -5,7 +5,7 @@ class User < ApplicationRecord
           :recoverable, :rememberable, :validatable
 
   has_many :games, dependent: :destroy
-  has_many :bookings, through: :games
+  has_many :bookings
   has_many :owned_games, class_name: "Game", foreign_key: "user_id"
   has_many :reviews
 end
