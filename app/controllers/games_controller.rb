@@ -30,7 +30,7 @@ class GamesController < ApplicationController
     @game.user = current_user
     authorize @game
     if @game.save
-      redirect_to games_path(@game)
+      redirect_to dashboard_path
     else
       render :new
     end
