@@ -45,7 +45,7 @@
     <a class="nav-link tab-underlined" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Reviews</a>
   </li>
   <li class="nav-item" role="presentation">
-    <a class="nav-link tab-underlined" id="map-tab" data-toggle="tab" href="#map" role="tab" aria-controls="map" aria-selected="false">Map</a>
+    <a class="nav-link tab-underlined" id="maper-tab" data-toggle="tab" href="#maper" role="tab" aria-controls="maper" aria-selected="false">Map</a>
   </li>
 </ul>
 <div class="tab-content" id="myTabContent">
@@ -97,11 +97,13 @@
         <% end %>
       </div>
     </div>
-    <div class="tab-pane fade" id="map" role="tabpanel" aria-labelledby="map-tab">
+    <div class="tab-pane fade" id="maper" role="tabpanel" aria-labelledby="map-tab">
     <div class="mb-2 mt-4  p-5 info-section">
-      <div>
-        <h4>Insert your code here</h4>
-      </div>
+        <div id="map"
+      style="width: 100%; height: 600px;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+     </div>
     </div>
   </div>
   </div>

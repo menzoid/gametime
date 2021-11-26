@@ -33,7 +33,7 @@ class ReviewsController < ApplicationController
     params.require(:review).permit(:comment, :rating)
   end
 
-  # def find_user
-  #   @user = current_user.id
-  # end
+  def find_user
+    @user = current_user.id
+  end
 end
