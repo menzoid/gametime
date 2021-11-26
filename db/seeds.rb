@@ -20,7 +20,7 @@ games_hash = ["The game of life",
               "Catan",
               "Mastermind",
               "Uno"]
-
+games_categories_a = ["Family", ]
 games_descriptions = ["The Game of Life, also known simply as Life, is a board game originally created in 1860 by Milton Bradley, as The Checkered Game of Life. ... Two to four or six players can participate in one game. Variations of the game accommodate up to ten players. The modern version was originally published 100 years later, in 1960.",
 "Monopoly is a multi-player economics-themed board game. In the game, players roll two dice to move around the game board, buying and trading properties, and developing them with houses and hotels. Players collect rent from their opponents, with the goal being to drive them into bankruptcy.",
 "Scrabble is a word game in which two to four players score points by placing tiles, each bearing a single letter, onto a game board divided into a 15×15 grid of squares. The tiles must form words that, in crossword fashion, read left to right in rows or downward in columns, and be included in a standard dictionary or lexicon.",
