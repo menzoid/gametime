@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 .index-games-show{
   width: 100%;
   padding: 50px 0;
@@ -25,13 +26,15 @@
   height: 270px;
   padding: 15px 15px;
 
-  background: linear-gradient(to bottom left, #212131, #313249, #414262);// ----------------------------------------------------color of the card
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: linear-gradient(to top, #212131, #313249, #414262);// ----------------------------------------------------color of the card
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
   border-radius: 30px;
   cursor: pointer;
   transition: var(--transition-time);
   background-size: cover;
+
+    box-shadow:-2px 2px 5px rgba(224, 122, 95, 0.3),
+            2px -2px 5px rgba(239, 187, 173, 0.3);
 }
 .div-category-game-show:hover{ //// ------------------------------ hover animation of the div
   transform: scale(1.1);
@@ -49,13 +52,22 @@ color: $light;
   justify-content: center;
   width: 100%;
   height: 100%;
-  border-radius: 20px 20px 0 0;
-  box-shadow:-2px 2px 5px $orange,
-            2px -2px 5px $light;
+  // border-radius: 20px 20px 0 0;
+  // box-shadow:-2px 2px 5px $orange,
+  //           2px -2px 5px $light;
 
-  background-color: $dark; // -------------------------------------------------------------------------- color of the background icon
+  // background-color: $dark; // -------------------------------------------------------------------------- color of the background icon
 }
-
+.daddy-div-image-game-card-index img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px 20px 0 0;
+  // box-shadow:-2px 2px 5px $orange,
+  //           2px -2px 5px $light;
+}
 // this is for the tag of the player count above the image... -------------------
 .player-count-top-of-cards{
   position: absolute;
@@ -63,10 +75,10 @@ color: $light;
   top: 3%;
   left: 3%;
   border-radius: 20px;
-  border: 1px solid $light;
+  // border: 1px solid $light;
 
   padding: 0px 10px;
-  background: linear-gradient(to bottom left, $orange, $light);
+  background: linear-gradient(to bottom, $orange, $orange-light);
 }
 
 
@@ -77,7 +89,7 @@ color: $light;
   border-radius: 20px 20px 0 0;
 }
 
-// .div-category-game-show img{  ////------------------------------------------ This is for adding an image on the div
+// .daddy-div-image-game-card-index img{  ////------------------------------------------ This is for adding an image on the div
 //   width: 100%;
 //   overflow: hidden;
 //   border-radius: 20px 20px 0 0;
@@ -86,33 +98,62 @@ color: $light;
 
 // this is for the content on the bottom of the div ----------------------- also the content of the elements inside the div
 .content-of-the-div-category-game-show{
-  margin-top: 10px;
-  min-height: 12vh;
+  margin-top: 12px;
+  min-height: 11vh;
   width: 100%;
-p{
-  color: $light;
-  font-family: monospace;
-  font-size: 12px;
-  margin-bottom: 5px;
-}
-h1{
-  color: $light;
-  font-family: monospace;
-}
-hr{
-  color: $light;
-}
+  p{
+    color: $light;
+    font-family: "Nunito", "Helvetica", "sans-serif";
+    font-size: 12px;
+    margin: 10px 0;
+  }
+  h1{
+    color: $light;
+    font-family: "Nunito", "Helvetica", "sans-serif";
+  }
 }
 
 .childdy-content-of-the-div-category-game-show{
   h1{
     margin-bottom: 0px;
-      font-size: 20px;
+    font-size: 20px;
+    // right: 2%;
+    // top: 51%;
+
+    color: $light;
+
+    // border-radius: 20px;
+    // border: 1px solid #F4F1DE;
+    // padding: 0px 10px;
+    // background: #E07A5F;
   }
   .difficulty-content-div-category-game-show{
-    color: $light;
+    position: absolute;
+    margin-bottom: 0px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    right: 2%;
+    top: 53%;
+
+    color: $green;
+
+    border-radius: 20px;
+    padding: 3px 10px;
+    padding-right: 20px;
+    background: $green-light;
+
   }
 }
+
+.title-and-time-content-card{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  color: $orange-light;
+}
+
 
 // this is the list features index
 .game-feature-card-index{

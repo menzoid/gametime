@@ -29,6 +29,7 @@ Category.create!(name: 'Deck Builder', photo: 'https://www.mcgill.ca/oss/files/o
 Category.create!(name: 'Family', photo: 'https://cdn.shopify.com/s/files/1/0035/0715/9129/products/ChessAndDrafts-FoldingBoard-51153_800x800.jpg?v=1633620211')
 Category.create!(name: 'Roll & Move', photo: 'https://www.mcgill.ca/oss/files/oss/styles/hd/public/deckofcards_cover-02.png?itok=S-zIXK-9&timestamp=1530113172')
 Category.create!(name: 'War game', photo: 'https://cdn.shopify.com/s/files/1/0035/0715/9129/products/ChessAndDrafts-FoldingBoard-51153_800x800.jpg?v=1633620211')
+Category.create!(name: 'Educational', photo: 'https://cdn.shopify.com/s/files/1/0035/0715/9129/products/ChessAndDrafts-FoldingBoard-51153_800x800.jpg?v=1633620211')
 
 puts "added categories"
 puts "deleting games"
