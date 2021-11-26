@@ -4,21 +4,25 @@
 }
 // principal value of navbar
 .navbar-class-parent{
+  position:fixed;
+  z-index: 100;
+  margin: 0 auto;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  width: 97%;
+  width: 100%;
   height: 70px;
-  margin: 15px auto;
+  top: 20px;
 }
 .navbar-lewagon {
   justify-content: space-between;
   background: linear-gradient(135deg, $blue, $dark);
   border-radius: 20px;
   border: $blue 3px solid;
-  width: 100%;
-  // box-shadow: 0 0 15px $blue; shadow behind navbar
+  width: 97%;
+  margin: 0 auto;
 }
 
 // value of the right side of the navbar

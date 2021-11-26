@@ -28,7 +28,7 @@
     <%# side featured games %>
   <div class="side-game-feature-game-index">
     <% @games[0..3].each do |game| %>
-      <div class="div-game-index">
+      <div class="parent-content-of-the-div-game-index">
         <%= link_to game_path(game) do %>
           <div class="content-of-the-div-game-index">
             <%= image_tag game.photo %>
@@ -47,14 +47,16 @@
   <h1 class="top-games-title mt-5">Categories</h1>
   <div class="category-main-div-game-index">
     <% @categories.each do |category| %>
-      <%= link_to category_path(category) do %>
-        <div class="category-layout-design-category-game-index">
-          <%= cl_image_tag category.photo %>
-          <div>
-          <p><%= category.name %></p>
+      <div class="parent-category-layout-design-category-game-index">
+        <%= link_to category_path(category) do %>
+          <div class="category-layout-design-category-game-index">
+            <%= cl_image_tag category.photo %>
+            <div class="child-category-layout-design-category-game-index">
+            <p><%= category.name %></p>
+            </div>
           </div>
-        </div>
-      <% end %>
+        <% end %>
+      </div>
     <% end %>
   </div>
 </div>

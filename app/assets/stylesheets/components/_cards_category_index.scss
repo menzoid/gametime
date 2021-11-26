@@ -89,7 +89,7 @@
 }
 
 ///--------------------------------------container image for image side
-.div-game-index{ ////--------------------------------------- properties of the sides cards of the banner
+.parent-content-of-the-div-game-index{ ////--------------------------------------- properties of the sides cards of the banner
   width: 100%;
   height: 100%;
   border-radius: 20px;
@@ -97,13 +97,13 @@
   overflow: hidden;
   transition: var(--transition-time);
 }
-.div-game-index p {
+.parent-content-of-the-div-game-index p {
   color: $light;
 }
-.div-game-index img {
+.parent-content-of-the-div-game-index img {
   width: 100%;
 }
-.div-game-index:hover{  //// ------------------------------ transition when hover
+.parent-content-of-the-div-game-index:hover{  //// ------------------------------ transition when hover
   transform: scale(1.05);
 }
 
@@ -143,6 +143,7 @@
 
 // this is the design of the card for the neumorphism
 .category-layout-design-category-game-index{
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -165,14 +166,35 @@
   border: 2px solid $orange;
   padding: 2px 20px;
   border-radius: 20px;
+  color: $orange;
+  font-size: 18px;
   transition: var(--transition-time);
 }
-.category-layout-design-category-game-index:hover{
-  transform: skew(5deg);
+.category-layout-design-category-game-index:hover{ //// ------------------------------animation time baby
+  animation-duration: 1s;
+  animation-name: dropDivAnim;
 }
+@keyframes dropDivAnim { //// -----------------------------those are the category animation
+  0% {
+    box-shadow:  -30px 30px 60px #2a2b3e,
+                30px -30px 60px #383a54;
+    background: linear-gradient(225deg, #34364e, #2c2d42);
+  }
+  50% {
+    box-shadow:  -30px 30px 60px #383a54,
+              30px -30px 60px #2a2b3e;
+    background: linear-gradient(225deg, #2c2d42, #34364e);
+  }
+  100% {
+    box-shadow:  -30px 30px 60px #2a2b3e,
+                30px -30px 60px #383a54;
+    background: linear-gradient(225deg, #34364e, #2c2d42);
+  }
+}
+
 .category-layout-design-category-game-index p:hover{
-  transform: skew(-5deg);
   background-color: $orange;
+  color: $light;
 }
 .category-main-div-game-index a{
   text-decoration: none;

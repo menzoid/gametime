@@ -1,14 +1,14 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(/assets/home-page-banner01.jpg); ">
-  <div class="container">
+  <div class="container-banner">
     <h1>It's GameTime baby!</strong>!</h1>
     <p>Find and rent a game to play at home with your friends</p>
-    <button class=" btn button-game-home-page"><%= link_to "Let's play", games_path %></button>
+    <%= button_to "Let's play", games_path, method: :get %>
   </div>
 </div>
 
-<div class="container about-section mt-5 p-4">
+<div class="about-section-parent mt-5 p-4">
   <h2>How it Works</h2>
-  <div class=" d-flex justify-content-around align-items-center">
+  <div class="about-section-child">
     <div class="home-card">
       <i class="fas fa-search home-icon"></i>
       <p>Find board games in your area</p>

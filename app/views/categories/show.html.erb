@@ -1,3 +1,14 @@
+<!------------------------------- this is th eback button part ---------->
+        <div class="back-button-link">
+          <%= link_to 'javascript:history.go(-1);' do %>
+            <div class="back-button">
+              <p>Back</p>
+            </div>
+          <% end %>
+        </div>
+<!------------------------------- this is th eback button part ---------->
+
+<!---------------------------this is the divs for the rest----------------------->
 <div class="index-games-show">
   <div class="parent-div-category-game-show">
     <% @games.each do |game| %>

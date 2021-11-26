@@ -1,10 +1,13 @@
 .banner {
-  height: 90vh;
+  height: 100vh;
   border-radius: 0 0 20px 20px;
   padding: 150px 0;
 
   background-size: cover;
   background-position: center;
+
+  position: relative;
+  top: -100px;
 }
 
 .banner h1 {
@@ -22,6 +25,29 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
+.container-banner{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 90%;
+  margin-left: 10%;
+}
+.container-banner input{ ////// ------------------------------------------ button on home page banner
+  padding: 5px 30px;
+  border-radius: 30px;
+  background-color: $orange;
+  border: 2px solid $orange;
+  color: $light;
+  font-size: 20px;
+  font-weight: 500;
+  transition: var(--transition-time);
+}
+.container-banner input:hover{
+  background: transparent;
+  border: 2px solid $orange;
+  color: $orange;
+}
 // button banner
 .button-game-home-page{
   text-align: center;
