@@ -14,10 +14,10 @@
       <% if user_signed_in? %>
         <!-----------------------NEED TO BE RELACE BY BOOKINGS ?----------------------------------->
         <li class="nav-item mr-3">
-          <%= link_to "My Bookings", dashboard_path , class: "nav-link text-white" %>
+          <%= link_to "My Bookings", dashboard_path , class: "nav-link", style:"color: white;"%>
         </li>
         <li class="nav-item mr-3">
-          <%= link_to 'Games', games_path, class: "nav-link text-white" %>
+          <%= link_to 'Games', games_path, class: "nav-link", style:"color: white;"%>
         </li>
         <li class="nav-item dropdown">
           <%= image_tag "/assets/profile-avatar01.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
@@ -31,7 +31,7 @@
       <% else %>
         <div class="navbar-signing ">
           <div class="signup-navbar"><%= link_to 'SignUp', new_user_registration_path %></div>
-          <div class="login-navbar"><%= link_to "Login", new_user_session_path %></div>
+          <div class="login-navbar"><%= button_to "Login", new_user_session_path, method: :get %></div>
         </div>
       <% end %>
     </ul>

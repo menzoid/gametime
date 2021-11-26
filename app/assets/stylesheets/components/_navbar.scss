@@ -64,7 +64,7 @@
 }
 
 // signin button
-.login-navbar{
+.login-navbar input{
   padding: 2px 20px;
   border: 1px solid transparent;
   background: $orange;
@@ -74,7 +74,7 @@
   color: $light;
   transition: var(--transition-time);
 }
-.login-navbar:hover{
+.login-navbar input:hover{
   border: 1px solid $orange;
   background: $dark;
   border-radius:15px;
