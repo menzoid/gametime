@@ -2,48 +2,41 @@
   <div class="parent-div-category-game-show">
     <% @games.each do |game| %>
       <%= link_to game_path(game) do %>
-      <div>
+      <div class="div-category-game-show">
+          <div class="player-count-top-of-cards">
+            <i class="fas fa-users fa-sm"></i>
+            <%= game.player_count %> +
+          </div>
+        <div class="child-div-category-game-show-index">
         <div>
-          <i class="fas fa-users fa-sm"></i>
-          <%= game.player_count %> +
-        </div>
-        <div class="div-category-game-show">
           <% if game.photo.attached? %>
-          <div class="daddy-div-image-game-card-index"  style="background-image: url(<%= cl_image_path game.photo.key %>) ;">
+            <div class="daddy-div-image-game-card-index">
+              <i class="fas fa-ghost fa-6x"></i>
+            </div>
           <% else %>
-          <div class="daddy-div-image-game-card-index"  style="background-image: url(<%= image_path 'battleship.jpg' %>) ;">
+            <div class="daddy-div-image-game-card-index"  style="background-image: url(<%= cl_image_path game.photo.key %>) ;">
           <% end %>
+          </div>
         </div>
-      </div>
           <div class="content-of-the-div-category-game-show">
-            <div>
+            <div class="childdy-content-of-the-div-category-game-show">
               <h1><%= truncate(game.title, length: 20) %></h1>
-            </div>
-              <hr style="width: 80%; margin: 0;">
-              <p><%= truncate(game.description, length: 50) %></p>
-          <!-- <div class="game-feature-card-index" style="list-style: none; color:white; font-size: 12px;">
-            <div>
-              <i class="fas fa-users fa-sm"></i>
-              <%= game.player_count %> +
-            </div>
-              |
-            <div>
-              Difficulty:
+              <div class="difficulty-content-div-category-game-show">
+                Difficulty:
                 <% game.difficulty.times do  %>
                   <i class="fas fa-crown fa-sm"></i>
-                  <% end %>
+                <% end %>
                 <% (5 - game.difficulty).times do  %>
                   <i class="fas fa-crown fa-sm crown-opa"></i>
-                  <% end %>
+                <% end %>
+              </div>
             </div>
-              |
-            <div>
-              <i class="fas fa-user-clock"></i> <%= game.play_time.round(1) %>H
-            </div>
-          </div>-->
+              <hr style="width: 100%; margin: 5px 0; background-color: white;">
+              <p><%= truncate(game.description, length: 50) %></p>
           </div>
         </div>
       <% end %>
     <% end  %>
   </div>
+</div>
 </div>

@@ -3,7 +3,7 @@
   padding: 50px 0;
 }
 
-.parent-div-category-game-show{
+.parent-div-category-game-show{  //// ------------------------------ basic design css for the layout of the cards
   display: grid;
   grid-template-columns: auto auto auto auto;
   grid-row-gap: 50px;
@@ -14,18 +14,18 @@
 .parent-div-category-game-show a:hover{
   text-decoration: none;
 }
-.div-category-game-show{
+.div-category-game-show{ ///------------------------------- properties of the div for the index categories cards
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
 
   width: 320px;
-  height: 300px;
+  height: 270px;
   padding: 15px 15px;
 
-  background: rgba(255, 255, 255, 0);
-  backdrop-filter: blur(10px);
+  background: linear-gradient(to bottom left, #212131, #313249, #414262);// ----------------------------------------------------color of the card
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
   border-radius: 30px;
@@ -33,29 +33,62 @@
   transition: var(--transition-time);
   background-size: cover;
 }
-.div-category-game-show:hover{
+.div-category-game-show:hover{ //// ------------------------------ hover animation of the div
   transform: scale(1.1);
+  transition: var(--transition-time);
+
+.fa-ghost{
+color: $light;
 }
+}
+
+
+.child-div-category-game-show-index{ ///--------------------------------- layout inside the card and around the icon
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px 20px 0 0;
+  box-shadow:-2px 2px 5px $orange,
+            2px -2px 5px $light;
+
+  background-color: $dark; // -------------------------------------------------------------------------- color of the background icon
+}
+
+// this is for the tag of the player count above the image... -------------------
+.player-count-top-of-cards{
+  position: absolute;
+  z-index: 5;
+  top: 3%;
+  left: 3%;
+  border-radius: 20px;
+  border: 1px solid $light;
+
+  padding: 0px 10px;
+  background: linear-gradient(to bottom left, $orange, $light);
+}
+
+
 .daddy-div-image-game-card-index{
   height: 100%;
   width: 100%;
   background-size: cover;
   border-radius: 20px 20px 0 0;
-
-
-}
-.div-category-game-show img{
-  width: 100%;
-  overflow: hidden;
-  border-radius: 20px 20px 0 0;
-  margin-bottom: 20px;
 }
 
+// .div-category-game-show img{  ////------------------------------------------ This is for adding an image on the div
+//   width: 100%;
+//   overflow: hidden;
+//   border-radius: 20px 20px 0 0;
+//   margin-bottom: 20px;
+// }
 
+// this is for the content on the bottom of the div ----------------------- also the content of the elements inside the div
 .content-of-the-div-category-game-show{
-  margin-top: 15px;
+  margin-top: 10px;
   min-height: 10vh;
-
+  width: 100%;
 p{
   color: $light;
   font-family: monospace;
@@ -65,8 +98,20 @@ p{
 h1{
   color: $light;
   font-family: monospace;
-  font-size: 23px;
 }
+hr{
+  color: $light;
+}
+}
+
+.childdy-content-of-the-div-category-game-show{
+  h1{
+    margin-bottom: 0px;
+      font-size: 20px;
+  }
+  .difficulty-content-div-category-game-show{
+    color: $light;
+  }
 }
 
 // this is the list features index
