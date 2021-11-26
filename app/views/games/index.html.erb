@@ -16,7 +16,7 @@
     <div class="banner-top-feature-game-index">
       <%= link_to game_path(@featured_game) do %>
       <div class="banner-feature-content-game-index">
-        <%= image_tag @featured_game.photo %>
+        <%= cl_image_tag @featured_game.photo.key %>
         <div class="banner-feature-content-game-index-bg">
         <h1><%= @featured_game.title %></h1>
         <p><%= @featured_game.description %></p>
@@ -32,7 +32,7 @@
       <div class="parent-content-of-the-div-game-index">
         <%= link_to game_path(game) do %>
           <div class="content-of-the-div-game-index">
-            <%= image_tag game.photo %>
+            <%= cl_image_tag game.photo.key %>
               <div class ="child-content-of-the-div-game-index">
                 <%= game.title %>
               </div>
@@ -51,7 +51,7 @@
       <div class="parent-category-layout-design-category-game-index">
         <%= link_to category_path(category) do %>
           <div class="category-layout-design-category-game-index">
-            <%= cl_image_tag category.photo %>
+            <%= image_tag category.photo %>
             <div class="child-category-layout-design-category-game-index">
             <p><%= category.name %></p>
             </div>

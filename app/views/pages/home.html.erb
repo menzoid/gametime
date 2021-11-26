@@ -3,6 +3,7 @@
     <h1>It's GameTime baby!</strong>!</h1>
     <p>Find and rent a game to play at home with your friends</p>
     <%= button_to "Let's play", games_path, method: :get %>
+    <%= button_to "edit", edit_user_registration_path, method: :get %>
   </div>
 </div>
 
@@ -23,19 +24,3 @@
     </div>
   </div>
 </div>
-
-      <!--Category row-->
-      <div class="div-category-home-page">
-        <div class="boxing-div-category-home-page">
-          <div class="content-div-category-home-page">
-              <div class="category"><%= image_tag("category01.jpg", :alt => "category01") %></div>
-          </div>
-          <div class="content-div-category-home-page clearfix d-none d-md-block">
-              <div class="category"><%= image_tag("category01.jpg", :alt => "category01") %></div>
-          </div>
-          <div class="content-div-category-home-page clearfix d-none d-md-block">
-              <div class="category"><%= image_tag("category01.jpg", :alt => "category01") %></div>
-          </div>
-        </div>
-      </div>
-      <!--/.Category row-->
