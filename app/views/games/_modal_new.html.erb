@@ -2,16 +2,16 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="gameModalLabel">Rent game</h5>
+        <h5 class="modal-title modal-letters" id="gameModalLabel">Rent game</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
         <%= simple_form_for [game,booking] do |f| %>
       <div class="modal-body">
-      <p>Price per day: <%= @game.price %>eur</p>
-        <%= f.input :start_date %>
-        <%= f.input :end_date %>
+      <p class="modal-letters">Price per day: <%= @game.price %>eur</p>
+        <%= f.input :start_date, class:"modal-letters" %>
+        <%= f.input :end_date, class:"modal-letters" %>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
