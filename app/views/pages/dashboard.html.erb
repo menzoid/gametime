@@ -16,89 +16,33 @@
   <div class="tab-pane fade show active" id="mygames" role="tabpanel" aria-labelledby="mygames-tab">
     <div class="mb-2 mt-4  p-5 info-section">
       <div>
-
-
-
-        <h4>Put here the games that this person has uploaded</h4>
-
-
-
-
+        <% @games.each do |game| %>
+        <div class="card-product">
+          <%= cl_image_tag game.photo.key %>
+          <div class="card-product-infos">
+            <h2><%= game.title %></h2>
+            <p><%= game.description %></p>
+          </div>
+        </div>
+        <% end  %>
       </div>
     </div>
   </div>
   <div class="tab-pane fade" id="renting" role="tabpanel" aria-labelledby="renting-tab">
     <div class="mb-2 mt-4  p-5 info-section">
       <div>
-        <h2>My Bookings</h2>
-        <table style="width:100%">
-          <tr>
-            <th>Game</th>
-            <th>Owner</th>
-            <th>From</th>
-            <th>To</th>
-            <th>Total Time</th>
-            <th>Rental Total</th>
-          </tr>
-
-          <% @bookings.each do |booking| %>
-          <tr>
-            <td><%= booking.game.title %></td>
-            <td><%= booking.game.user.username %></td>
-            <td><%= booking.start_date %></td>
-            <td><%= booking.end_date %></td>
+        <% @bookings.each do |booking| %>
+        <div class="card-product">
+          <%= cl_image_tag booking.game.photo.key %>
+          <div class="card-product-infos">
             <%n_days=booking.end_date - booking.start_date %>
-            <td><%= n_days.to_i %></td>
-            <td><%= n_days.to_i * booking.game.price %></td>
-          </tr>
-        <% end %>
-        </table>
-      </div>
-    </div>
-  </div>
-  <div class="tab-pane fade" id="history" role="tabpanel" aria-labelledby="history-tab">
-    <div class="mb-2 mt-4  p-5 info-section">
-      <div>
-
-
-
-        <h4>Games that this user has rented in the past, if possible</h4>
-
-
-
-
+            <h2><%= booking.game.title %></h2>
+            <p><%= booking.start_date %><strong> until </strong><%= booking.end_date %>, at <%= n_days.to_i * booking.game.price %> Euros</p>
+          </div>
+        </div>
+        <% end  %>
       </div>
     </div>
   </div>
 </div>
-
-
-
-
-<h2>My Games</h2>
-
-<table style="width:100%">
-
-  <tr>
-    <th>Game Title</th>
-    <th>Rented to</th>
-    <th>From</th>
-    <th>To</th>
-    <th>Total Time</th>
-    <th>Money Made</th>
-  </tr>
-  <% @bookings_received.each do |booking| %>
-    <%if booking.game.user.email == current_user.email  %>
-    <tr>
-      <td><%= booking.game.title %></td>
-      <td><%=booking.user.username%></td>
-      <td><%= booking.start_date %></td>
-      <td><%= booking.end_date %></td>
-      <%n_days=booking.end_date - booking.start_date %>
-      <td><%= n_days.to_i %></td>
-      <td><%= n_days.to_i * booking.game.price %></td>
-    </tr>
-    <% end %>
-  <% end %>
-</table>
 </div>
