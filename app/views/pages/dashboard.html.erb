@@ -66,36 +66,29 @@
   <div class="tab-pane fade" id="renting" role="tabpanel" aria-labelledby="renting-tab">
     <div class="mb-2 mt-4  p-5 info-section">
       <div>
-        <table class="table" style="width:100%">
-          <thead class="thead-light">
+
+        <h2>My Bookings</h2>
+        <table style="width:100%">
           <tr>
-            <th scope="col">Game</th>
-            <th scope="col">From</th>
-            <th scope="col">To</th>
-            <th scope="col">Total Time</th>
-            <th  scope="col">Rental Total</th>
+            <th>Game</th>
+            <th>Owner</th>
+            <th>From</th>
+            <th>To</th>
+            <th>Total Time</th>
+            <th>Rental Total</th>
           </tr>
-          </thead>
+
           <% @bookings.each do |booking| %>
-            <tr>
-              <td>
-                <%= booking.game.title %>
-              </td>
-              <td>
-                <%= booking.start_date %>
-              </td>
-              <td>
-                <%= booking.end_date %>
-              </td>
-              <%n_days=booking.end_date - booking.start_date %>
-                <td>
-                  <%= n_days.to_i %> days
-                </td>
-                <td>
-                  <%= n_days.to_i * booking.game.price %>
-                </td>
-            </tr>
-            <% end %>
+          <tr>
+            <td><%= booking.game.title %></td>
+            <td><%= booking.game.user.username %></td>
+            <td><%= booking.start_date %></td>
+            <td><%= booking.end_date %></td>
+            <%n_days=booking.end_date - booking.start_date %>
+            <td><%= n_days.to_i %></td>
+            <td><%= n_days.to_i * booking.game.price %></td>
+          </tr>
+        <% end %>
         </table>
       </div>
     </div>
@@ -103,11 +96,30 @@
 
 </div>
 
+<h2>My Games</h2>
 
+<table style="width:100%">
 
-
-
-
-
-
+  <tr>
+    <th>Game Title</th>
+    <th>Rented to</th>
+    <th>From</th>
+    <th>To</th>
+    <th>Total Time</th>
+    <th>Money Made</th>
+  </tr>
+  <% @bookings_received.each do |booking| %>
+    <%if booking.game.user.email == current_user.email  %>
+    <tr>
+      <td><%= booking.game.title %></td>
+      <td><%=booking.user.username%></td>
+      <td><%= booking.start_date %></td>
+      <td><%= booking.end_date %></td>
+      <%n_days=booking.end_date - booking.start_date %>
+      <td><%= n_days.to_i %></td>
+      <td><%= n_days.to_i * booking.game.price %></td>
+    </tr>
+    <% end %>
+  <% end %>
+</table>
 </div>
