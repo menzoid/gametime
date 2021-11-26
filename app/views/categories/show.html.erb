@@ -19,31 +19,31 @@
             <%= game.player_count %> +
           </div>
         <div class="child-div-category-game-show-index">
-        <div>
           <% if game.photo.attached? %>
-            <div class="daddy-div-image-game-card-index">
-              <i class="fas fa-ghost fa-6x"></i>
-            </div>
-          <% else %>
             <div class="daddy-div-image-game-card-index"  style="background-image: url(<%= cl_image_path game.photo.key %>) ;">
+          <% else %>
+            <div class="daddy-div-image-game-card-index" style="background-image: url(<%= image_path 'chess.png' %>) ;">
           <% end %>
           </div>
         </div>
           <div class="content-of-the-div-category-game-show">
             <div class="childdy-content-of-the-div-category-game-show">
-              <h1><%= truncate(game.title, length: 20) %></h1>
               <div class="difficulty-content-div-category-game-show">
-                Difficulty:
+                LEVEL:
                 <% game.difficulty.times do  %>
-                  <i class="fas fa-crown fa-sm"></i>
+                  <i class="fas fa-crown fa-lg" style="letter-spacing: -0.6em;"></i>
                 <% end %>
                 <% (5 - game.difficulty).times do  %>
-                  <i class="fas fa-crown fa-sm crown-opa"></i>
+                  <i class="fas fa-crown fa-lg crown-opa" style="letter-spacing: -0.6em;"></i>
                 <% end %>
               </div>
+              <div class="title-and-time-content-card">
+                <h1><%= truncate(game.title, length: 20) %></h1>
+                <div><i class="far fa-clock" style="padding: 0 3px;"></i><%= game.play_time.round(1) %>H</div>
+              </div>
             </div>
-              <hr style="width: 100%; margin: 5px 0; background-color: white;">
-              <p><%= truncate(game.description, length: 50) %></p>
+              <hr style="width: 100%; margin: 5px 0; background-color: #E07A5F;">
+              <p><%= truncate(game.description, length: 95) %></p>
           </div>
         </div>
       <% end %>
